@@ -3,162 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kristina Natalia</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Portofolio - [Nama Anda]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.15/tailwind.min.css">
+    <style>
+        /* Gradien Biru Cantik */
+        body {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+        .bg-custom {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+        /* Ubah Warna Teks */
+        .text-custom {
+            color: #ffffff; /* Putih */
+        }
+        /* Tombol Kustom */
+        .btn-custom {
+            background-color: #ffffff; /* Putih */
+            color: #3498db; /* Biru */
+        }
+        .btn-custom:hover {
+            background-color: #2980b9; /* Biru Tua */
+        }
+    </style>
 </head>
-<body class="font-sans bg-gradient-to-r from-purple-700 to-yellow-500">
-    <header class="bg-custom py-10">
-        <div class="container mx-auto text-center">
-            <h1 class="text-4xl text-white font-serif">Kristina Natalia</h1>
-            <p class="text-white text-lg">Mahasiswa Ilmu Komputer di UNDIKSHA</p>
-            <p class="text-white text-lg">Kelahiran Bandung, 11 Desember 2003</p>
-        </div>
+<body class="text-custom">
+    <!-- Header -->
+    <header class="bg-custom text-center py-16">
+        <h1 class="text-4xl font-bold mb-4">[Nama Anda]</h1>
+        <p class="text-xl">Mahasiswa Ilmu Komputer di UNDIKSHA</p>
     </header>
-    <nav class="bg-white py-5 shadow-md">
-        <div class="container mx-auto flex justify-center space-x-6">
-            <a href="#about" class="text-gray-600 hover:text-gray-800 transition duration-300">Tentang Saya</a>
-            <a href="#interests" class="text-gray-600 hover:text-gray-800 transition duration-300">Minat</a>
-            <a href="#hobbies" class="text-gray-600 hover:text-gray-800 transition duration-300">Hobi</a>
-            <a href="#education" class="text-gray-600 hover:text-gray-800 transition duration-300">Pendidikan</a>
-            <a href="#study" class="text-gray-600 hover:text-gray-800 transition duration-300">Studi di UNDIKSHA</a>
-            <a href="#contact" class="text-gray-600 hover:text-gray-800 transition duration-300">Hubungi Saya</a>
+
+    <!-- About Me -->
+    <section id="about" class="py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-serif text-custom mb-6">Tentang Saya</h2>
+            <p class="text-lg leading-relaxed mb-6">Saya adalah mahasiswa Ilmu Komputer di UNDIKSHA dengan minat dalam pemrograman, kecerdasan buatan, analisis data, dan keamanan komputer. Saya aktif dalam kegiatan akademik dan berharap dapat menggabungkan minat dan hobi saya dengan ilmu komputer untuk menciptakan peluang baru dan inovasi dalam industri ini.</p>
+            <p class="text-lg leading-relaxed">Selain belajar, saya juga memiliki minat dalam berbagai hal seperti membaca buku, traveling, kuliner, dan menonton film. Saya berusaha untuk terus berkembang dan berkontribusi pada perkembangan teknologi informasi di masa depan.</p>
         </div>
-    </nav>
-    <main>
-        <section id="about" class="py-20 bg-white">
-            <div class="container mx-auto">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl text-indigo-900 font-serif">Tentang Saya</h2>
-                </div>
-                <p class="text-lg text-gray-700 leading-relaxed font-sans">
-                    Halo, nama saya adalah Kristina Natalia, dan saya lahir di Bandung pada tanggal 11 Desember 2003. Saya saat ini adalah seorang mahasiswa di Universitas Pendidikan Ganesha (UNDIKSHA), di mana saya sedang mengejar gelar dalam bidang Ilmu Komputer. Di sini, saya akan membagikan lebih banyak informasi tentang minat, hobi, dan tujuan saya dalam kehidupan serta di dunia akademik.
-                </p>
-            </div>
-        </section>
-        <section id="interests" class="py-20 bg-gray-50">
-            <div class="container mx-auto">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl text-indigo-900 font-serif">Minat dan Bakat Saya</h2>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10">
-                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                        <img class="w-16 h-16 mx-auto mb-4 rounded-full" src="img/Design.svg" alt="Desain">
-                        <h3 class="text-xl font-semibold text-indigo-900 font-serif text-center">Desain Grafis</h3>
-                        <p class="text-gray-700 mt-2 text-center font-sans">Saya senang mendesain menggunakan aplikasi seperti Ibispaint.</p>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-serif text-custom text-center mb-10">Portofolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Portfolio Item 1 -->
+                <div class="relative group">
+                    <img class="w-full h-auto rounded-lg transform scale-100 transition-transform duration-300 group-hover:scale-105" src="images/portfolio-1.jpg" alt="Portfolio Item 1">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex justify-center items-center">
+                        <a href="portfolio-item-1.html" class="text-white text-xl font-semibold hover:underline">Lihat Detail</a>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                        <img class="w-16 h-16 mx-auto mb-4 rounded-full" src="img/Gaming.svg" alt="Bermain Game">
-                        <h3 class="text-xl font-semibold text-indigo-900 font-serif text-center">Bermain Game</h3>
-                        <p class="text-gray-700 mt-2 text-center font-sans">Saya menikmati bermain game dan eksplorasi gaya dalam permainan.</p>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="relative group">
+                    <img class="w-full h-auto rounded-lg transform scale-100 transition-transform duration-300 group-hover:scale-105" src="images/portfolio-2.jpg" alt="Portfolio Item 2">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex justify-center items-center">
+                        <a href="portfolio-item-2.html" class="text-white text-xl font-semibold hover:underline">Lihat Detail</a>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                        <img class="w-16 h-16 mx-auto mb-4 rounded-full" src="img/Book.svg" alt="Mengoleksi Novel">
-                        <h3 class="text-xl font-semibold text-indigo-900 font-serif text-center">Mengoleksi Novel</h3>
-                        <p class="text-gray-700 mt-2 text-center font-sans">Saya suka mengoleksi dan membaca berbagai novel.</p>
-                    </div>
-                    <!-- Tambahkan minat dan bakat lainnya sesuai keinginan Anda di sini -->
                 </div>
-            </div>
-        </section>
-        <section id="hobbies" class="py-20 bg-yellow-100">
-            <div class="container mx-auto">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl text-indigo-900 font-serif">Hobi Saya</h2>
-                </div>
-                <ul class="list-disc list-inside mt-10 text-gray-700 font-sans">
-                    <li>Desain</li>
-                    <li>Style</li>
-                    <li>Kewirausahaan</li>
-                    <li>Menari</li>
-                    <li>Membaca buku</li>
-                    <li>Traveling</li>
-                    <li>Foodie</li>
-                    <li>Menonton film</li>
-                </ul>
-            </div>
-        </section>
-        <section id="education" class="py-20 bg-indigo-100">
-            <div class="container mx-auto">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl text-indigo-900 font-serif">Pendidikan</h2>
-                </div>
-                <div class="w-full overflow-x-auto">
-                    <table class="table-auto border-collapse w-full">
-                        <thead>
-                            <tr class="bg-indigo-300 text-white">
-                                <th class="px-4 py-2">Tingkat Pendidikan</th>
-                                <th class="px-4 py-2">Sekolah/Universitas</th>
-                                <th class="px-4 py-2">Tahun</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-gray-700 font-sans">
-                            <tr>
-                                <td class="border px-4 py-2">TK</td>
-                                <td class="border px-4 py-2">Kartika 19 Bandung</td>
-                                <td class="border px-4 py-2">2009-2010</td>
-                            </tr>
-                            <tr>
-                                <td class="border px-4 py-2">SD</td>
-                                <td class="border px-4 py-2">SDN 0408232 Kabanjahe</td>
-                                <td class="border px-4 py-2">2010-2016</td>
-                            </tr>
-                            <tr>
-                                <td class="border px-4 py-2">SMP</td>
-                                <td class="border px-4 py-2">SMPN 3 Berastagi</td>
-                                <td class="border px-4 py-2">2016-2018</td>
-                            </tr>
-                            <tr>
-                                <td class="border px-4 py-2">SMA</td>
-                                <td class="border px-4 py-2">SMA Swasta Santa Maria Kabanjahe</td>
-                                <td class="border px-4 py-2">2019-2021</td>
-                            </tr>
-                            <tr>
-                                <td class="border px-4 py-2">Universitas</td>
-                                <td class="border px-4 py-2">Universitas Pendidikan Ganesha</td>
-                                <td class="border px-4 py-2">2022-Sekarang</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-        <section id="study" class="py-20 bg-green-100">
-            <div class="container mx-auto">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl text-indigo-900 font-serif">Studi di UNDIKSHA</h2>
-                </div>
-                <p class="text-lg text-gray-700 leading-relaxed font-sans">
-                    Sebagai mahasiswa Ilmu Komputer di UNDIKSHA, saya sangat bersemangat untuk mengembangkan keterampilan teknis dan pengetahuan dalam bidang ini. Saya tertarik untuk menjelajahi berbagai aspek komputasi, seperti pemrograman, kecerdasan buatan, analisis data, dan keamanan komputer.
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed font-sans">
-                    Saya juga aktif dalam kegiatan akademik di kampus, seperti mengikuti seminar, berpartisipasi dalam proyek-proyek penelitian, dan menjadi anggota komunitas ilmu komputer. Tujuan saya adalah untuk mencapai potensi maksimal saya dalam studi dan berkontribusi pada perkembangan teknologi informasi di masa depan.
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed font-sans">
-                    Selain itu, saya juga berharap dapat menggabungkan minat dan hobi saya, seperti desain dan kewirausahaan, dengan ilmu komputer untuk menciptakan peluang baru dan inovasi dalam industri ini.
-                </p>
-            </div>
-        </section>
-        <section id="contact" class="py-20 bg-yellow-200">
-            <div class="container mx-auto">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl text-indigo-900 font-serif">Hubungi Saya</h2>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold text-indigo-900 font-serif">Instagram</h3>
-                        <a href="https://instagram.com/kriss.laughs?igshid=MmU2YjMzNjRlOQ==" class="text-blue-600 hover:underline mt-2" target="_blank" rel="noopener noreferrer">kriss.laughs</a>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold text-indigo-900 font-serif">Email</h3>
-                        <a href="mailto:tinabgn123@gmail.com" class="text-blue-600 hover:underline mt-2">tinabgn123@gmail.com</a>
+                <!-- Portfolio Item 3 -->
+                <div class="relative group">
+                    <img class="w-full h-auto rounded-lg transform scale-100 transition-transform duration-300 group-hover:scale-105" src="images/portfolio-3.jpg" alt="Portfolio Item 3">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex justify-center items-center">
+                        <a href="portfolio-item-3.html" class="text-white text-xl font-semibold hover:underline">Lihat Detail</a>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-custom">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-serif text-custom text-center mb-10">Hubungi Saya</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-indigo-900 font-serif">Instagram</h3>
+                    <a href="https://instagram.com/kriss.laughs?igshid=MmU2YjMzNjRlOQ==" class="text-blue-600 hover:underline mt-2" target="_blank" rel="noopener noreferrer">kriss.laughs</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-indigo-900 font-serif">Email</h3>
+                    <a href="mailto:tinabgn123@gmail.com" class="text-blue-600 hover:underline mt-2">tinabgn123@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="bg-custom py-10">
         <div class="container mx-auto text-center">
-            <p class="text-white">© 2023 Kristina Natalia. All rights reserved.</p>
+            <p class="text-white">© 2023 [Nama Anda]. All rights reserved.</p>
         </div>
     </footer>
 </body>
