@@ -36,54 +36,138 @@
 
         /* Perkecil tampilan navbar */
         .navbar {
-            background-color: #1a1a1a; /* Warna latar belakang navbar */
+            background-color: #333; /* Warna latar belakang navbar */
             padding: 10px;
             display: flex;
-            justify-content: space-between; /* Membuat konten navbar berada di sisi kiri dan kanan */
+            justify-content: space-between;
         }
 
         .navbar a {
+            color: #fff;
             margin-right: 15px;
-            color: #ffffff; /* Warna teks navbar */
-            font-weight: bold;
+            font-size: 18px;
         }
 
-        /* Popup */
+        /* Gaya popup */
         .popup {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Transparansi latar belakang popup */
-            justify-content: center;
-            align-items: center;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
             z-index: 1;
+            align-items: center;
+            justify-content: center;
         }
 
         .popup-content {
-            background-color: #ffffff;
+            background-color: #fff;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
 
-        .popup h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #333;
+        /* Gaya kotak minat dan hobi */
+        .hobby-box {
+            position: relative;
+            overflow: hidden;
         }
 
-        .popup p {
-            font-size: 16px;
-            color: #555;
+        .hobby-box img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
         }
 
-        /* Tampilkan popup saat diberikan kelas "show-popup" */
-        .show-popup {
+        .hobby-box:hover img {
+            transform: scale(1.1);
+        }
+
+        .hobby-box .hobby-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-size: 20px;
             display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .hobby-box:hover .hobby-overlay {
+            opacity: 1;
+        }
+
+        /* Gaya kotak Organisasi, Portofolio, dan Sertifikat */
+        .item-box {
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s ease;
+        }
+
+        .item-box img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .item-box:hover img {
+            transform: scale(1.1);
+        }
+
+        .item-box .item-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: #fff;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .item-box:hover .item-overlay {
+            opacity: 1;
+        }
+
+        .item-box-1 {
+            background-color: #3498db; /* Warna latar belakang Organisasi 1 */
+        }
+
+        .item-box-2 {
+            background-color: #e74c3c; /* Warna latar belakang Organisasi 2 */
+        }
+
+        .item-box-3 {
+            background-color: #27ae60; /* Warna latar belakang Project 1 */
+        }
+
+        .item-box-4 {
+            background-color: #f39c12; /* Warna latar belakang Project 2 */
+        }
+
+        .item-box-5 {
+            background-color: #9b59b6; /* Warna latar belakang Project 3 */
+        }
+
+        .item-box-6 {
+            background-color: #34495e; /* Warna latar belakang Sertifikat 1 */
+        }
+
+        .item-box-7 {
+            background-color: #e67e22; /* Warna latar belakang Sertifikat 2 */
         }
     </style>
 </head>
@@ -96,16 +180,26 @@
         </div>
         <div>
             <a href="#minat-hobi" class="text-lg font-bold">Minat & Hobi</a>
+        </div>
+        <div>
             <a href="#pendidikan" class="text-lg font-bold">Pendidikan</a>
+        </div>
+        <div>
             <a href="#organisasi" class="text-lg font-bold">Organisasi</a>
+        </div>
+        <div>
             <a href="#portofolio" class="text-lg font-bold">Portofolio</a>
+        </div>
+        <div>
             <a href="#sertifikat" class="text-lg font-bold">Sertifikat</a>
+        </div>
+        <div>
             <a href="#kontak" class="text-lg font-bold">Kontak</a>
         </div>
     </div>
 
     <!-- Identitas -->
-    <section id="identitas" class="bg-gray-800 text-white py-20">
+    <section id="identitas" class="bg-gray-100 py-20">
         <div class="w-9/12 mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center">Tentang Saya</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -128,72 +222,72 @@
     </section>
 
     <!-- Minat & Hobi -->
-    <section id="minat-hobi" class="bg-blue-800 text-white py-20">
+    <section id="minat-hobi" class="bg-gray-800 text-white py-20">
         <div class="w-9/12 mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center">Minat dan Hobi</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-                <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
+                <div class="hobby-box">
                     <img src="desain.jpg" alt="Desain Grafis" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-80 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Desain Grafis</p>
+                    <div class="hobby-overlay bg-white text-gray-800">Desain Grafis</div>
                 </div>
-                <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
+                <div class="hobby-box">
                     <img src="game.jpg" alt="Bermain Game" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-80 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Bermain Game</p>
+                    <div class="hobby-overlay bg-white text-gray-800">Bermain Game</div>
                 </div>
-                <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
+                <div class="hobby-box">
                     <img src="novel.jpg" alt="Mengoleksi Novel" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-80 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Mengoleksi Novel</p>
+                    <div class="hobby-overlay bg-white text-gray-800">Mengoleksi Novel</div>
                 </div>
-                <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
+                <div class="hobby-box">
                     <img src="menari.jpg" alt="Menari" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-80 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Menari</p>
+                    <div class="hobby-overlay bg-white text-gray-800">Menari</div>
                 </div>
-                <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
+                <div class="hobby-box">
                     <img src="buku.jpg" alt="Membaca Buku" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-80 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Membaca Buku</p>
+                    <div class="hobby-overlay bg-white text-gray-800">Membaca Buku</div>
                 </div>
-                <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
+                <div class="hobby-box">
                     <img src="travel.jpg" alt="Traveling" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-80 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Traveling</p>
+                    <div class="hobby-overlay bg-white text-gray-800">Traveling</div>
                 </div>
-                <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
+                <div class="hobby-box">
                     <img src="foodie.jpg" alt="Foodie" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-80 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Foodie</p>
+                    <div class="hobby-overlay bg-white text-gray-800">Foodie</div>
                 </div>
-                <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
+                <div class="hobby-box">
                     <img src="film.jpg" alt="Menonton Film" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-80 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Menonton Film</p>
+                    <div class="hobby-overlay bg-white text-gray-800">Menonton Film</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pendidikan -->
-    <section id="pendidikan" class="bg-blue-900 text-white py-20">
+    <section id="pendidikan" class="bg-gray-100 py-20">
         <div class="w-9/12 mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center">Pendidikan</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-blue-700 p-6 rounded-lg shadow-lg">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-semibold mb-2">TK</h3>
                     <p class="text-lg">Kartika 19 Bandung</p>
                     <p class="text-gray-500">2009-2010</p>
                 </div>
-                <div class="bg-blue-700 p-6 rounded-lg shadow-lg">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-semibold mb-2">SD</h3>
                     <p class="text-lg">SDN 0408232 Kabanjahe</p>
                     <p class="text-gray-500">2010-2016</p>
                 </div>
-                <div class="bg-blue-700 p-6 rounded-lg shadow-lg">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-semibold mb-2">SMP</h3>
                     <p class="text-lg">SMPN 3 Berastagi</p>
                     <p class="text-gray-500">2016-2018</p>
                 </div>
-                <div class="bg-blue-700 p-6 rounded-lg shadow-lg">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-semibold mb-2">SMA</h3>
                     <p class="text-lg">SMA Swasta Santa Maria Kabanjahe</p>
                     <p class="text-gray-500">2019-2021</p>
                 </div>
-                <div class="bg-blue-700 p-6 rounded-lg shadow-lg">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-semibold mb-2">Universitas</h3>
                     <p class="text-lg">Universitas Pendidikan Ganesha</p>
                     <p class="text-gray-500">2022-Sekarang</p>
@@ -203,32 +297,24 @@
     </section>
 
     <!-- Organisasi -->
-    <section id="organisasi" class="bg-blue-800 text-white py-20">
+    <section id="organisasi" class="bg-gray-100 py-20">
         <div class="w-9/12 mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center">Organisasi</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-blue-700 p-6 rounded-lg shadow-lg group relative cursor-pointer transform transition-transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2">Organisasi 1</h3>
-                    <p class="text-lg">Deskripsi Organisasi 1</p>
-                    <p class="text-gray-500">Tahun Bergabung: 20XX</p>
-                    <div class="popup">
-                        <div class="popup-content">
-                            <h2>Organisasi 1</h2>
-                            <p>Ini adalah deskripsi yang lebih lengkap tentang Organisasi 1.</p>
-                            <button onclick="hidePopup()" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 mt-4 rounded-full">Tutup</button>
-                        </div>
+                <div class="item-box item-box-1">
+                    <img src="organisasi1.jpg" alt="Organisasi 1" class="w-full rounded-lg">
+                    <div class="item-overlay bg-gray-800 text-white">
+                        <h3 class="text-xl font-semibold mb-2">Organisasi 1</h3>
+                        <p class="text-lg">Deskripsi Organisasi 1</p>
+                        <p class="text-gray-500">Tahun Bergabung: 20XX</p>
                     </div>
                 </div>
-                <div class="bg-blue-700 p-6 rounded-lg shadow-lg group relative cursor-pointer transform transition-transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2">Organisasi 2</h3>
-                    <p class="text-lg">Deskripsi Organisasi 2</p>
-                    <p class="text-gray-500">Tahun Bergabung: 20XX</p>
-                    <div class="popup">
-                        <div class="popup-content">
-                            <h2>Organisasi 2</h2>
-                            <p>Ini adalah deskripsi yang lebih lengkap tentang Organisasi 2.</p>
-                            <button onclick="hidePopup()" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 mt-4 rounded-full">Tutup</button>
-                        </div>
+                <div class="item-box item-box-2">
+                    <img src="organisasi2.jpg" alt="Organisasi 2" class="w-full rounded-lg">
+                    <div class="item-overlay bg-gray-800 text-white">
+                        <h3 class="text-xl font-semibold mb-2">Organisasi 2</h3>
+                        <p class="text-lg">Deskripsi Organisasi 2</p>
+                        <p class="text-gray-500">Tahun Bergabung: 20XX</p>
                     </div>
                 </div>
                 <!-- Anda dapat menambahkan lebih banyak organisasi di sini -->
@@ -237,44 +323,32 @@
     </section>
 
     <!-- Portofolio -->
-    <section id="portofolio" class="bg-blue-900 text-white py-20">
+    <section id="portofolio" class="bg-gray-800 text-white py-20">
         <div class="w-9/12 mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center">Portofolio</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-blue-700 p-6 rounded-lg shadow-lg group relative cursor-pointer transform transition-transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2">Project 1</h3>
-                    <p class="text-lg">Deskripsi Project 1</p>
-                    <p class="text-gray-500">Tahun: 20XX</p>
-                    <div class="popup">
-                        <div class="popup-content">
-                            <h2>Project 1</h2>
-                            <p>Ini adalah deskripsi yang lebih lengkap tentang Project 1.</p>
-                            <button onclick="hidePopup()" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 mt-4 rounded-full">Tutup</button>
-                        </div>
+                <div class="item-box item-box-3">
+                    <img src="project1.jpg" alt="Project 1" class="w-full rounded-lg">
+                    <div class="item-overlay bg-gray-100 text-gray-800">
+                        <h3 class="text-xl font-semibold mb-2">Project 1</h3>
+                        <p class="text-lg">Deskripsi Project 1</p>
+                        <p class="text-gray-500">Tahun: 20XX</p>
                     </div>
                 </div>
-                <div class="bg-blue-700 p-6 rounded-lg shadow-lg group relative cursor-pointer transform transition-transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2">Project 2</h3>
-                    <p class="text-lg">Deskripsi Project 2</p>
-                    <p class="text-gray-500">Tahun: 20XX</p>
-                    <div class="popup">
-                        <div class="popup-content">
-                            <h2>Project 2</h2>
-                            <p>Ini adalah deskripsi yang lebih lengkap tentang Project 2.</p>
-                            <button onclick="hidePopup()" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 mt-4 rounded-full">Tutup</button>
-                        </div>
+                <div class="item-box item-box-4">
+                    <img src="project2.jpg" alt="Project 2" class="w-full rounded-lg">
+                    <div class="item-overlay bg-gray-100 text-gray-800">
+                        <h3 class="text-xl font-semibold mb-2">Project 2</h3>
+                        <p class="text-lg">Deskripsi Project 2</p>
+                        <p class="text-gray-500">Tahun: 20XX</p>
                     </div>
                 </div>
-                <div class="bg-blue-700 p-6 rounded-lg shadow-lg group relative cursor-pointer transform transition-transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2">Project 3</h3>
-                    <p class="text-lg">Deskripsi Project 3</p>
-                    <p class="text-gray-500">Tahun: 20XX</p>
-                    <div class="popup">
-                        <div class="popup-content">
-                            <h2>Project 3</h2>
-                            <p>Ini adalah deskripsi yang lebih lengkap tentang Project 3.</p>
-                            <button onclick="hidePopup()" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 mt-4 rounded-full">Tutup</button>
-                        </div>
+                <div class="item-box item-box-5">
+                    <img src="project3.jpg" alt="Project 3" class="w-full rounded-lg">
+                    <div class="item-overlay bg-gray-100 text-gray-800">
+                        <h3 class="text-xl font-semibold mb-2">Project 3</h3>
+                        <p class="text-lg">Deskripsi Project 3</p>
+                        <p class="text-gray-500">Tahun: 20XX</p>
                     </div>
                 </div>
                 <!-- Anda dapat menambahkan lebih banyak proyek di sini -->
@@ -283,32 +357,24 @@
     </section>
 
     <!-- Sertifikat -->
-    <section id="sertifikat" class="bg-blue-800 text-white py-20">
+    <section id="sertifikat" class="bg-gray-100 py-20">
         <div class="w-9/12 mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center">Sertifikat</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-blue-700 p-6 rounded-lg shadow-lg group relative cursor-pointer transform transition-transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2">Sertifikat 1</h3>
-                    <p class="text-lg">Deskripsi Sertifikat 1</p>
-                    <p class="text-gray-500">Tahun: 20XX</p>
-                    <div class="popup">
-                        <div class="popup-content">
-                            <h2>Sertifikat 1</h2>
-                            <p>Ini adalah deskripsi yang lebih lengkap tentang Sertifikat 1.</p>
-                            <button onclick="hidePopup()" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 mt-4 rounded-full">Tutup</button>
-                        </div>
+                <div class="item-box item-box-6">
+                    <img src="sertifikat1.jpg" alt="Sertifikat 1" class="w-full rounded-lg">
+                    <div class="item-overlay bg-gray-800 text-white">
+                        <h3 class="text-xl font-semibold mb-2">Sertifikat 1</h3>
+                        <p class="text-lg">Deskripsi Sertifikat 1</p>
+                        <p class="text-gray-500">Tahun: 20XX</p>
                     </div>
                 </div>
-                <div class="bg-blue-700 p-6 rounded-lg shadow-lg group relative cursor-pointer transform transition-transform hover:scale-105">
-                    <h3 class="text-xl font-semibold mb-2">Sertifikat 2</h3>
-                    <p class="text-lg">Deskripsi Sertifikat 2</p>
-                    <p class="text-gray-500">Tahun: 20XX</p>
-                    <div class="popup">
-                        <div class="popup-content">
-                            <h2>Sertifikat 2</h2>
-                            <p>Ini adalah deskripsi yang lebih lengkap tentang Sertifikat 2.</p>
-                            <button onclick="hidePopup()" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 mt-4 rounded-full">Tutup</button>
-                        </div>
+                <div class="item-box item-box-7">
+                    <img src="sertifikat2.jpg" alt="Sertifikat 2" class="w-full rounded-lg">
+                    <div class="item-overlay bg-gray-800 text-white">
+                        <h3 class="text-xl font-semibold mb-2">Sertifikat 2</h3>
+                        <p class="text-lg">Deskripsi Sertifikat 2</p>
+                        <p class="text-gray-500">Tahun: 20XX</p>
                     </div>
                 </div>
                 <!-- Anda dapat menambahkan lebih banyak sertifikat di sini -->
@@ -317,32 +383,90 @@
     </section>
 
     <!-- Kontak -->
-    <section id="kontak" class="bg-blue-900 text-white py-20">
+    <section id="kontak" class="bg-gray-100 py-20">
         <div class="w-9/12 mx-auto">
             <h2 class="text-3xl font-bold mb-10 text-center">Hubungi Saya</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
-                <div class="bg-blue-700 p-6 rounded-lg shadow-lg">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-semibold text-gray-900">Instagram</h3>
-                    <a href="https://instagram.com/kriss.laughs?igshid=MmU2YjMzNjRlOQ==" class="text-blue-500 hover:underline mt-2" target="_blank" rel="noopener noreferrer">kriss.laughs</a>
+                    <a href="https://instagram.com/kriss.laughs?igshid=MmU2YjMzNjRlOQ==" class="text-blue-600 hover:underline mt-2" target="_blank" rel="noopener noreferrer">kriss.laughs</a>
                 </div>
-                <div class="bg-blue-700 p-6 rounded-lg shadow-lg">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h3 class="text-xl font-semibold text-gray-900">Email</h3>
-                    <a href="mailto:tinabgn123@gmail.com" class="text-blue-500 hover:underline mt-2">tinabgn123@gmail.com</a>
+                    <a href="mailto:tinabgn123@gmail.com" class="text-blue-600 hover:underline mt-2">tinabgn123@gmail.com</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- JavaScript untuk menampilkan dan menyembunyikan popup -->
+    <!-- Popup Minat & Hobi -->
+    <div class="popup" id="popup-desain">
+        <div class="popup-content bg-gray-800 text-white">
+            <h2 class="text-3xl font-bold mb-6">Desain Grafis</h2>
+            <p class="text-lg">Ini adalah keterangan lebih lanjut tentang minat dan hobi dalam desain grafis.</p>
+            <button class="bg-red-600 text-white font-bold py-2 px-4 rounded hover:bg-red-800 focus:outline-none focus:ring focus:ring-red-400" onclick="closePopup('popup-desain')">Tutup</button>
+        </div>
+    </div>
+    <div class="popup" id="popup-game">
+        <div class="popup-content bg-gray-800 text-white">
+            <h2 class="text-3xl font-bold mb-6">Bermain Game</h2>
+            <p class="text-lg">Ini adalah keterangan lebih lanjut tentang minat dan hobi bermain game.</p>
+            <button class="bg-red-600 text-white font-bold py-2 px-4 rounded hover:bg-red-800 focus:outline-none focus:ring focus:ring-red-400" onclick="closePopup('popup-game')">Tutup</button>
+        </div>
+    </div>
+    <div class="popup" id="popup-novel">
+        <div class="popup-content bg-gray-800 text-white">
+            <h2 class="text-3xl font-bold mb-6">Mengoleksi Novel</h2>
+            <p class="text-lg">Ini adalah keterangan lebih lanjut tentang minat dan hobi mengoleksi novel.</p>
+            <button class="bg-red-600 text-white font-bold py-2 px-4 rounded hover:bg-red-800 focus:outline-none focus:ring focus:ring-red-400" onclick="closePopup('popup-novel')">Tutup</button>
+        </div>
+    </div>
+    <div class="popup" id="popup-menari">
+        <div class="popup-content bg-gray-800 text-white">
+            <h2 class="text-3xl font-bold mb-6">Menari</h2>
+            <p class="text-lg">Ini adalah keterangan lebih lanjut tentang minat dan hobi menari.</p>
+            <button class="bg-red-600 text-white font-bold py-2 px-4 rounded hover:bg-red-800 focus:outline-none focus:ring focus:ring-red-400" onclick="closePopup('popup-menari')">Tutup</button>
+        </div>
+    </div>
+    <div class="popup" id="popup-buku">
+        <div class="popup-content bg-gray-800 text-white">
+            <h2 class="text-3xl font-bold mb-6">Membaca Buku</h2>
+            <p class="text-lg">Ini adalah keterangan lebih lanjut tentang minat dan hobi membaca buku.</p>
+            <button class="bg-red-600 text-white font-bold py-2 px-4 rounded hover:bg-red-800 focus:outline-none focus:ring focus:ring-red-400" onclick="closePopup('popup-buku')">Tutup</button>
+        </div>
+    </div>
+    <div class="popup" id="popup-travel">
+        <div class="popup-content bg-gray-800 text-white">
+            <h2 class="text-3xl font-bold mb-6">Traveling</h2>
+            <p class="text-lg">Ini adalah keterangan lebih lanjut tentang minat dan hobi traveling.</p>
+            <button class="bg-red-600 text-white font-bold py-2 px-4 rounded hover:bg-red-800 focus:outline-none focus:ring focus:ring-red-400" onclick="closePopup('popup-travel')">Tutup</button>
+        </div>
+    </div>
+    <div class="popup" id="popup-foodie">
+        <div class="popup-content bg-gray-800 text-white">
+            <h2 class="text-3xl font-bold mb-6">Foodie</h2>
+            <p class="text-lg">Ini adalah keterangan lebih lanjut tentang minat dan hobi sebagai foodie.</p>
+            <button class="bg-red-600 text-white font-bold py-2 px-4 rounded hover:bg-red-800 focus:outline-none focus:ring focus:ring-red-400" onclick="closePopup('popup-foodie')">Tutup</button>
+        </div>
+    </div>
+    <div class="popup" id="popup-film">
+        <div class="popup-content bg-gray-800 text-white">
+            <h2 class="text-3xl font-bold mb-6">Menonton Film</h2>
+            <p class="text-lg">Ini adalah keterangan lebih lanjut tentang minat dan hobi menonton film.</p>
+            <button class="bg-red-600 text-white font-bold py-2 px-4 rounded hover:bg-red-800 focus:outline-none focus:ring focus:ring-red-400" onclick="closePopup('popup-film')">Tutup</button>
+        </div>
+    </div>
+
+    <!-- JavaScript untuk menampilkan/menutup popup -->
     <script>
-        function showPopup() {
-            const popup = document.querySelector(".popup");
-            popup.classList.add("show-popup");
+        function openPopup(popupId) {
+            var popup = document.getElementById(popupId);
+            popup.style.display = "block";
         }
 
-        function hidePopup() {
-            const popup = document.querySelector(".popup");
-            popup.classList.remove("show-popup");
+        function closePopup(popupId) {
+            var popup = document.getElementById(popupId);
+            popup.style.display = "none";
         }
     </script>
 </body>
