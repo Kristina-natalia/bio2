@@ -11,17 +11,17 @@
         /* Gaya font yang berbeda */
         .font-bold {
             font-weight: bold;
-            color: #333; /* Warna font berbeda */
+            color: #fff; /* Warna font berbeda */
         }
 
         .font-italic {
             font-style: italic;
-            color: #777; /* Warna font berbeda */
+            color: #ccc; /* Warna font berbeda */
         }
 
         .font-fancy {
             font-family: Cursive, sans-serif;
-            color: #c0392b; /* Warna font berbeda */
+            color: #e74c3c; /* Warna font berbeda */
         }
 
         /* Gaya link yang interaktif */
@@ -36,7 +36,7 @@
 
         /* Perkecil tampilan navbar */
         .navbar {
-            background-color: #3498db; /* Warna latar belakang navbar */
+            background-color: #111; /* Warna latar belakang navbar */
             padding: 10px;
         }
 
@@ -45,29 +45,59 @@
             color: #fff; /* Warna teks navbar */
         }
 
+        /* Latar belakang berwarna gelap untuk keseluruhan halaman */
+        body {
+            background-color: #111; /* Warna latar belakang utama */
+            color: #fff; /* Warna teks utama */
+        }
+
         /* Tambahkan beberapa perubahan desain lainnya sesuai kebutuhan Anda */
         /* Contoh: latar belakang sebagian elemen */
         .bg-gray-100 {
-            background-color: #f3f4f6; /* Warna latar belakang abu-abu */
+            background-color: #333; /* Warna latar belakang abu-abu lebih gelap */
         }
 
         .bg-gray-200 {
-            background-color: #e5e7eb; /* Warna latar belakang abu-abu lebih gelap */
+            background-color: #444; /* Warna latar belakang abu-abu lebih gelap */
         }
 
-        /* Penyesuaian lainnya sesuai kebutuhan */
+        /* Pop-up style */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Teks berwarna neon */
+        .text-neon {
+            text-shadow: 0 0 10px #f06, 0 0 20px #f06, 0 0 30px #f06, 0 0 40px #f06;
+        }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
     <div class="navbar">
-        <a href="#identitas" class="text-lg font-bold">Identitas</a>
-        <a href="#minat-hobi" class="text-lg font-bold">Minat & Hobi</a>
-        <a href="#pendidikan" class="text-lg font-bold">Pendidikan</a>
-        <a href="#organisasi" class="text-lg font-bold">Organisasi</a>
-        <a href="#portofolio" class="text-lg font-bold">Portofolio</a>
-        <a href="#kontak" class="text-lg font-bold">Kontak</a>
+        <a href="#identitas" class="text-lg font-bold text-neon">Identitas</a>
+        <a href="#minat-hobi" class="text-lg font-bold text-neon">Minat & Hobi</a>
+        <a href="#pendidikan" class="text-lg font-bold text-neon">Pendidikan</a>
+        <a href="#organisasi" class="text-lg font-bold text-neon">Organisasi</a>
+        <a href="#portofolio" class="text-lg font-bold text-neon">Portofolio</a>
+        <a href="#kontak" class="text-lg font-bold text-neon">Kontak</a>
     </div>
 
     <!-- Identitas -->
@@ -100,36 +130,77 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="desain.jpg" alt="Desain Grafis" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Desain Grafis</p>
+                    <div class="popup">
+                        <div class="popup-content">
+                            <p class="text-2xl font-bold text-neon">Desain Grafis</p>
+                            <p>Deskripsi untuk Desain Grafis di sini.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="game.jpg" alt="Bermain Game" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Bermain Game</p>
+                    <div class="popup">
+                        <div class="popup-content">
+                            <p class="text-2xl font-bold text-neon">Bermain Game</p>
+                            <p>Deskripsi untuk Bermain Game di sini.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="novel.jpg" alt="Mengoleksi Novel" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Mengoleksi Novel</p>
+                    <div class="popup">
+                        <div class="popup-content">
+                            <p class="text-2xl font-bold text-neon">Mengoleksi Novel</p>
+                            <p>Deskripsi untuk Mengoleksi Novel di sini.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="menari.jpg" alt="Menari" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Menari</p>
+                    <div class="popup">
+                        <div class="popup-content">
+                            <p class="text-2xl font-bold text-neon">Menari</p>
+                            <p>Deskripsi untuk Menari di sini.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="buku.jpg" alt="Membaca Buku" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Membaca Buku</p>
+                    <div class="popup">
+                        <div class="popup-content">
+                            <p class="text-2xl font-bold text-neon">Membaca Buku</p>
+                            <p>Deskripsi untuk Membaca Buku di sini.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="travel.jpg" alt="Traveling" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Traveling</p>
+                    <div class="popup">
+                        <div class="popup-content">
+                            <p class="text-2xl font-bold text-neon">Traveling</p>
+                            <p>Deskripsi untuk Traveling di sini.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="foodie.jpg" alt="Foodie" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Foodie</p>
+                    <div class="popup">
+                        <div class="popup-content">
+                            <p class="text-2xl font-bold text-neon">Foodie</p>
+                            <p>Deskripsi untuk Foodie di sini.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="film.jpg" alt="Menonton Film" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300">Menonton Film</p>
+                    <div class="popup">
+                        <div class="popup-content">
+                            <p class="text-2xl font-bold text-neon">Menonton Film</p>
+                            <p>Deskripsi untuk Menonton Film di sini.</p>
+                        </div>
+                    </div>
                 </div>
+                <!-- Anda dapat menambahkan lebih banyak minat dan hobi di sini -->
             </div>
         </div>
     </section>
@@ -140,27 +211,27 @@
             <h2 class="text-3xl font-bold mb-6 text-center">Pendidikan</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2">TK</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-neon">TK</h3>
                     <p class="text-lg">Kartika 19 Bandung</p>
                     <p class="text-gray-500">2009-2010</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2">SD</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-neon">SD</h3>
                     <p class="text-lg">SDN 0408232 Kabanjahe</p>
                     <p class="text-gray-500">2010-2016</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2">SMP</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-neon">SMP</h3>
                     <p class="text-lg">SMPN 3 Berastagi</p>
                     <p class="text-gray-500">2016-2018</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2">SMA</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-neon">SMA</h3>
                     <p class="text-lg">SMA Swasta Santa Maria Kabanjahe</p>
                     <p class="text-gray-500">2019-2021</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2">Universitas</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-neon">Universitas</h3>
                     <p class="text-lg">Universitas Pendidikan Ganesha</p>
                     <p class="text-gray-500">2022-Sekarang</p>
                 </div>
@@ -174,12 +245,12 @@
             <h2 class="text-3xl font-bold mb-6 text-center">Organisasi</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-gray-300 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2">Organisasi 1</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-neon">Organisasi 1</h3>
                     <p class="text-lg">Deskripsi Organisasi 1</p>
                     <p class="text-gray-500">Tahun Bergabung: 20XX</p>
                 </div>
                 <div class="bg-gray-300 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2">Organisasi 2</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-neon">Organisasi 2</h3>
                     <p class="text-lg">Deskripsi Organisasi 2</p>
                     <p class="text-gray-500">Tahun Bergabung: 20XX</p>
                 </div>
@@ -194,17 +265,17 @@
             <h2 class="text-3xl font-bold mb-6 text-center">Portofolio</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2">Project 1</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-neon">Project 1</h3>
                     <p class="text-lg">Deskripsi Project 1</p>
                     <p class="text-gray-500">Tahun: 20XX</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2">Project 2</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-neon">Project 2</h3>
                     <p class="text-lg">Deskripsi Project 2</p>
                     <p class="text-gray-500">Tahun: 20XX</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2">Project 3</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-neon">Project 3</h3>
                     <p class="text-lg">Deskripsi Project 3</p>
                     <p class="text-gray-500">Tahun: 20XX</p>
                 </div>
@@ -219,17 +290,30 @@
             <h2 class="text-3xl font-bold mb-10 text-center">Hubungi Saya</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-gray-900">Instagram</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 text-neon">Instagram</h3>
                     <a href="https://instagram.com/kriss.laughs?igshid=MmU2YjMzNjRlOQ==" class="text-blue-600 hover:underline mt-2" target="_blank" rel="noopener noreferrer">kriss.laughs</a>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-gray-900">Email</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 text-neon">Email</h3>
                     <a href="mailto:tinabgn123@gmail.com" class="text-blue-600 hover:underline mt-2">tinabgn123@gmail.com</a>
                 </div>
             </div>
         </div>
     </section>
 
-</body>
+    <!-- Script untuk menampilkan dan menyembunyikan pop-up -->
+    <script>
+        // Fungsi untuk menampilkan pop-up
+        function showPopup(id) {
+            var popup = document.querySelector("#" + id + " .popup");
+            popup.style.display = "block";
+        }
 
+        // Fungsi untuk menyembunyikan pop-up
+        function hidePopup(id) {
+            var popup = document.querySelector("#" + id + " .popup");
+            popup.style.display = "none";
+        }
+    </script>
+</body>
 </html>
