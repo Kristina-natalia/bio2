@@ -1,247 +1,135 @@
 <!DOCTYPE html>
-<html lang="id">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>Kristina Natalia</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <title>Profil Pribadi</title>
 </head>
+<body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-500 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold">Profil Saya</a>
+            <a href="/portfolio" class="text-xl hover:underline">Portofolio</a>
+        </div>
+    </nav>
 
-<body class="font-sans bg-gradient-to-r from-purple-700 to-gold">
-    <!-- Navbar -->
-    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
-        <div class="container">
-            <a class="logo" href="#">Kristina Natalia</a>
-            <ul class="nav">
-                <li class="item">
-                    <a class="link" href="#home">Beranda</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#about">Tentang Saya</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#portfolio">Portofolio</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#testmonial">Testimoni</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#blog">Blog</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#contact">Kontak</a>
-                </li>
-                <li class="item ml-md-3">
-                    <a href="components.html" class="btn btn-primary">Komponen</a>
-                </li>
+    <!-- Content -->
+    <div class="container mx-auto py-10">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">Tentang Saya</h1>
+            <p class="text-gray-600 mb-6">
+                Halo, nama saya adalah Kristina Natalia, dan saya lahir di Bandung pada tanggal 11 Desember 2003.
+                Saya saat ini adalah seorang mahasiswa di Universitas Pendidikan Ganesha (UNDIKSHA), di mana saya sedang mengejar gelar dalam bidang Ilmu Komputer.
+            </p>
+
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Minat dan Bakat Saya</h2>
+            <ul class="list-disc ml-8 text-gray-600 mb-6">
+                <li>Desain Grafis</li>
+                <li>Bermain Game</li>
+                <li>Mengoleksi Novel</li>
             </ul>
-            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
-                <div class="hamburger-box">
-                    <div class="hamburger-inner"></div>
+
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Pendidikan</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Education Item 1 -->
+                <div class="bg-yellow-200 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">TK</h3>
+                    <p class="text-gray-600 mb-2">Kartika 19 Bandung</p>
+                    <p class="text-gray-600">2009-2010</p>
                 </div>
-            </a>
+                <!-- Education Item 2 -->
+                <div class="bg-yellow-200 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">SD</h3>
+                    <p class="text-gray-600 mb-2">SDN 0408232 Kabanjahe</p>
+                    <p class="text-gray-600">2010-2016</p>
+                </div>
+                <!-- Education Item 3 -->
+                <div class="bg-yellow-200 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">SMP</h3>
+                    <p class="text-gray-600 mb-2">SMPN 3 Berastagi</p>
+                    <p class="text-gray-600">2016-2018</p>
+                </div>
+                <!-- Education Item 4 -->
+                <div class="bg-yellow-200 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">SMA</h3>
+                    <p class="text-gray-600 mb-2">SMA Swasta Santa Maria Kabanjahe</p>
+                    <p class="text-gray-600">2019-2021</p>
+                </div>
+                <!-- Education Item 5 -->
+                <div class="bg-yellow-200 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Universitas</h3>
+                    <p class="text-gray-600 mb-2">Universitas Pendidikan Ganesha</p>
+                    <p class="text-gray-600">2022-Sekarang</p>
+                </div>
+            </div>
         </div>
-    </nav><!-- End of Navbar -->
+    </div>
 
-    <!-- Header -->
-    <header id="home" class="header">
-        <div class="overlay"></div>
-        <div class="header-content container">
-            <h1 class="header-title">
-                <span class="up">Halo!</span>
-                <span class="down">Saya Kristina Natalia</span>
-            </h1>
-            <p class="header-subtitle">Mahasiswa Ilmu Komputer</p>
+    <!-- Portfolio Button -->
+    <div class="container mx-auto py-4 text-center">
+        <a href="/portfolio" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">
+            Lihat Portofolio Saya
+        </a>
+    </div>
 
-            <button class="btn btn-primary">Lihat Karya Saya</button>
-        </div>
-    </header><!-- End of Header -->
+    <!-- Portfolio Page -->
+    <div class="container mx-auto py-10">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">Portofolio</h1>
+            <p class="text-gray-600 mb-6">
+                Ini adalah beberapa proyek terbaru saya. Silakan klik pada proyek untuk melihat lebih lanjut.
+            </p>
 
-    <!-- About Section -->
-    <section class="section pt-0" id="about">
-        <div class="container text-center">
-            <div class="about">
-                <div class="about-img-holder">
-                    <img src="assets/imgs/kristina.jpg" class="about-img"
-                        alt="Kristina Natalia - Mahasiswa Ilmu Komputer">
-                </div>
-                <div class="about-caption">
-                    <p class="section-subtitle">Tentang Saya</p>
-                    <h2 class="section-title mb-3">Halo, Saya Kristina Natalia</h2>
-                    <p>
-                        Saya lahir di Bandung pada tanggal 11 Desember 2003. Saat ini, saya adalah seorang mahasiswa di
-                        Universitas Pendidikan Ganesha (UNDIKSHA), di mana saya sedang mengejar gelar dalam bidang Ilmu
-                        Komputer. Di sini, saya akan membagikan lebih banyak informasi tentang minat, bakat, hobi, dan
-                        tujuan saya dalam kehidupan dan dunia akademik.
-
-                        <br>
-                        <br>
-                        <strong>Minat dan Bakat:</strong>
-                        <br>
-                        <ul class="text-left">
-                            <li>Desain</li>
-                            <li>Desain Grafis</li>
-                            <li>Bermain Game</li>
-                            <li>Mengoleksi Novel</li>
-                        </ul>
-
-                        <strong>Hobi:</strong>
-                        <br>
-                        <ul class="text-left">
-                            <li>Desain</li>
-                            <li>Style</li>
-                            <li>Kewirausahaan</li>
-                            <li>Menari</li>
-                            <li>Membaca Buku</li>
-                            <li>Traveling</li>
-                            <li>Foodie</li>
-                            <li>Menonton Film</li>
-                        </ul>
-                    </p>
-                    <button class="btn-rounded btn btn-outline-primary mt-4">Unduh CV</button>
-                </div>
-            </div><!-- End of About Wrapper -->
-        </div><!-- End of Container -->
-    </section><!-- End of About Section -->
-
-    <!-- Service Section -->
-    <section class="section" id="service">
-        <div class="container text-center">
-            <p class="section-subtitle">Apa yang Saya Lakukan ?</p>
-            <h6 class="section-title mb-6">Layanan</h6>
-            <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/pencil-case.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free
-                                bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">Desain</h6>
-                            <p class="subtitle">Saya senang mendesain menggunakan aplikasi seperti Ibispaint.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/game-controller.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free
-                                bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">Bermain Game</h6>
-                            <p class="subtitle">Saya menikmati bermain game dan eksplorasi gaya dalam permainan.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/book.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free
-                                bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">Mengoleksi Novel</h6>
-                            <p class="subtitle">Saya suka mengoleksi dan membaca berbagai novel.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/monitor.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free
-                                bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">Ilmu Komputer</h6>
-                            <p class="subtitle">Saya adalah seorang mahasiswa Ilmu Komputer dengan minat dalam pemrograman,
-                                kecerdasan buatan, analisis data, dan keamanan komputer.</p>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End of Row -->
-        </div><!-- End of Container -->
-    </section><!-- End of Service Section -->
-
-    <!-- Portfolio Section -->
-    <section class="section" id="portfolio">
-        <div class="container text-center">
-            <p class="section-subtitle">Lihat Karya Saya</p>
-            <h6 class="section-title mb-6">Portofolio</h6>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <a href="#" class="portfolio-card">
-                        <img src="assets/imgs/web-design.jpg" alt="Desain Web"
-                            class="portfolio-card-image">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Desain Web</h4>
-                                <p class="font-weight-normal">Kategori: Template Web</p>
-                            </span>
-                        </span>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item bg-gray-100 p-4 rounded-lg shadow-lg">
+                    <a href="#" class="block">
+                        <img src="assets/imgs/portfolio-1.jpg" alt="Portfolio 1" class="w-full rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Situs Web Perusahaan</h3>
+                        <p class="text-gray-600 mt-2">Situs web modern untuk perusahaan teknologi terkemuka.</p>
                     </a>
                 </div>
-                <!-- Tambahkan kartu portofolio lainnya di sini -->
-            </div><!-- End of Row -->
-        </div><!-- End of Container -->
-    </section><!-- End of Portfolio Section -->
-
-    <!-- Pricing Section -->
-    <section class="section" id="pricing">
-        <div class="container text-center">
-            <p class="section-subtitle">Berapa Biaya Saya ?</p>
-            <h6 class="section-title mb-6">Harga</h6>
-            <div class="pricing-wrapper">
-                <div class="pricing-card">
-                    <div class="pricing-card-header">
-                        <img class="pricing-card-icon" src="assets/imgs/scooter.svg"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free
-                            bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                    </div>
-                    <!-- Tambahkan konten kartu harga di sini -->
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item bg-gray-100 p-4 rounded-lg shadow-lg">
+                    <a href="#" class="block">
+                        <img src="assets/imgs/portfolio-2.jpg" alt="Portfolio 2" class="w-full rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Aplikasi Mobile E-commerce</h3>
+                        <p class="text-gray-600 mt-2">Aplikasi mobile yang memudahkan belanja online.</p>
+                    </a>
                 </div>
-                <!-- Tambahkan kartu harga lainnya di sini -->
-            </div><!-- End of Pricing Wrapper -->
-        </div><!-- End of Container -->
-    </section><!-- End of Pricing Section -->
-
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-        <div class="container text-center">
-            <p class="section-subtitle">Bagaimana Anda bisa menghubungi saya?</p>
-            <h6 class="section-title mb-5">Hubungi Saya</h6>
-            <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
-                <div class="form-row">
-                    <div class="form-group col-sm-6">
-                        <input type="text" size="50" class="form-control" placeholder="Nama Anda" required>
-                    </div>
-                    <div class="form-group col-sm-6">
-                        <input type="email" class="form-control" placeholder="Masukkan Email" required>
-                    </div>
-                    <div class="form-group col-sm-12">
-                        <textarea name="comment" id="comment" rows="6" class="form-control"
-                            placeholder="Tulis Sesuatu"></textarea>
-                    </div>
-                    <div class="form-group col-sm-12 mt-3">
-                        <input type="submit" value="Kirim Pesan" class="btn btn-outline-primary rounded">
-                    </div>
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item bg-gray-100 p-4 rounded-lg shadow-lg">
+                    <a href="#" class="block">
+                        <img src="assets/imgs/portfolio-3.jpg" alt="Portfolio 3" class="w-full rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Aplikasi Manajemen Tugas</h3>
+                        <p class="text-gray-600 mt-2">Aplikasi untuk mengatur tugas dan pekerjaan sehari-hari.</p>
+                    </a>
                 </div>
-            </form><!-- End of Contact Form -->
-        </div><!-- End of Container -->
-    </section><!-- End of Contact Section -->
-
-    <!-- Footer -->
-    <div class="container">
-        <footer class="footer">
-            <p class="mb-0">Hak Cipta &copy; <script>document.write(new Date().getFullYear())</script> Kristina Natalia. Seluruh hak cipta dilindungi.
-            </p>
-            <div class="social-links text-right m-auto ml-sm-auto">
-                <a href="https://www.instagram.com/kriss.laughs/" class="link"><i class="ti-instagram"></i></a>
-                <a href="mailto:tinabgn123@gmail.com" class="link"><i class="ti-email"></i></a>
             </div>
-        </footer>
-    </div><!-- End of Page Footer -->
-</body>
+        </div>
+    </div>
 
+    <!-- Contact Page -->
+    <section id="contact" class="bg-yellow-200 py-20">
+        <div class="w-9/12 mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl text-slate-900 font-subtitle">Hubungi Saya</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Instagram</h3>
+                    <a href="https://instagram.com/kriss.laughs?igshid=MmU2YjMzNjRlOQ=="
+                        class="text-blue-600 hover:underline mt-2" target="_blank"
+                        rel="noopener noreferrer">kriss.laughs</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Email</h3>
+                    <a href="mailto:tinabgn123@gmail.com" class="text-blue-600 hover:underline mt-2">tinabgn123@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
 </html>
