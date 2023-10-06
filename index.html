@@ -13,49 +13,42 @@
         .hover-scale:hover {
             transform: scale(1.05);
         }
-        .hover-rotate {
+        .hover-popup {
             transition: transform 0.2s;
         }
-        .hover-rotate:hover {
-            transform: rotate(5deg);
+        .hover-popup:hover {
+            transform: translateY(-5px);
         }
-        .navbar {
-            background-color: #1a202c;
-        }
-        .navbar a {
-            color: #f7fafc;
-            transition: color 0.2s;
-        }
-        .navbar a:hover {
-            color: #cbd5e0;
+        .rounded-lg-large {
+            border-radius: 1rem;
         }
     </style>
 </head>
 <body class="bg-gray-100 font-sans">
 
 <!-- Navbar -->
-<nav class="navbar py-4">
+<nav class="bg-gradient-to-r from-blue-600 to-blue-400 text-white py-4">
     <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-2xl font-semibold text-white">Profil Saya</h1>
+        <h1 class="text-2xl font-bold text-yellow-100">Profil Saya</h1>
         <ul class="flex space-x-6">
-            <li><a href="#identitas">Identitas</a></li>
-            <li><a href="#minat-hobi">Minat & Hobi</a></li>
-            <li><a href="#pendidikan">Pendidikan</a></li>
-            <li><a href="#organisasi">Organisasi</a></li>
-            <li><a href="#portofolio">Portofolio</a></li>
-            <li><a href="#kontak">Kontak</a></li>
+            <li><a href="#identitas" class="hover:text-yellow-100">Identitas</a></li>
+            <li><a href="#minat-hobi" class="hover:text-yellow-100">Minat & Hobi</a></li>
+            <li><a href="#pendidikan" class="hover:text-yellow-100">Pendidikan</a></li>
+            <li><a href="#organisasi" class="hover:text-yellow-100">Organisasi</a></li>
+            <li><a href="#portofolio" class="hover:text-yellow-100">Portofolio</a></li>
+            <li><a href="#kontak" class="hover:text-yellow-100">Kontak</a></li>
         </ul>
     </div>
 </nav>
 
 <!-- Identitas -->
-<section id="identitas" class="bg-gradient-to-r from-blue-600 to-red-600 text-white py-20">
+<section id="identitas" class="bg-gradient-to-r from-blue-400 to-blue-200 text-white py-20">
     <div class="container mx-auto text-center">
         <h2 class="text-4xl font-bold mb-4 hover-scale">Tentang Saya</h2>
-        <p class="text-lg hover-rotate">Halo, saya adalah Kristina Natalia. Mahasiswa program studi Ilmu Komputer.</p>
-        <p class="text-lg hover-rotate">Tempat, tanggal lahir: Bandung, 11 Desember 2003</p>
-        <p class="text-lg hover-rotate">Jenis Kelamin: Perempuan</p>
-        <p class="text-lg hover-rotate">Kewarganegaraan: Indonesia</p>
+        <p class="text-lg hover-popup">Nama: Kristina Natalia</p>
+        <p class="text-lg hover-popup">Tempat, tanggal lahir: Bandung, 11 Desember 2003</p>
+        <p class="text-lg hover-popup">Jenis Kelamin: Perempuan</p>
+        <p class="text-lg hover-popup">Kewarganegaraan: Indonesia</p>
     </div>
 </section>
 
@@ -65,29 +58,29 @@
         <h2 class="text-3xl font-semibold mb-8 hover-scale">Minat & Hobi</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <!-- Minat & Hobi Items -->
-            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 hover-rotate">
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover-popup">
                 <img src="icon-design.png" alt="Desain" class="mx-auto w-16 h-16 mb-4">
-                <p class="font-semibold">Desain</p>
+                <p class="text-lg font-semibold">Desain</p>
             </div>
-            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 hover-rotate">
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover-popup">
                 <img src="icon-dance.png" alt="Menari" class="mx-auto w-16 h-16 mb-4">
-                <p class="font-semibold">Menari</p>
+                <p class="text-lg font-semibold">Menari</p>
             </div>
-            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 hover-rotate">
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover-popup">
                 <img src="icon-book.png" alt="Membaca Buku" class="mx-auto w-16 h-16 mb-4">
-                <p class="font-semibold">Membaca Buku</p>
+                <p class="text-lg font-semibold">Membaca Buku</p>
             </div>
-            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 hover-rotate">
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover-popup">
                 <img src="icon-travel.png" alt="Traveling" class="mx-auto w-16 h-16 mb-4">
-                <p class="font-semibold">Traveling</p>
+                <p class="text-lg font-semibold">Traveling</p>
             </div>
-            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 hover-rotate">
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover-popup">
                 <img src="icon-food.png" alt="Foodie" class="mx-auto w-16 h-16 mb-4">
-                <p class="font-semibold">Foodie</p>
+                <p class="text-lg font-semibold">Foodie</p>
             </div>
-            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 hover-rotate">
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover-popup">
                 <img src="icon-movie.png" alt="Menonton Film" class="mx-auto w-16 h-16 mb-4">
-                <p class="font-semibold">Menonton Film</p>
+                <p class="text-lg font-semibold">Menonton Film</p>
             </div>
         </div>
     </div>
@@ -138,7 +131,7 @@
     </div>
 </section>
 
-<!-- Pengalaman Organisasi -->
+<!-- Organisasi -->
 <section id="organisasi" class="bg-gray-100 py-16">
     <div class="container mx-auto">
         <h2 class="text-3xl font-semibold text-gray-800 text-center mb-8 hover-scale">Pengalaman Organisasi</h2>
@@ -179,7 +172,7 @@
 </section>
 
 <!-- Kontak -->
-<section id="kontak" class="bg-gradient-to-r from-blue-600 to-red-600 text-white py-16">
+<section id="kontak" class="bg-gradient-to-r from-red-600 to-red-400 text-white py-16">
     <div class="container mx-auto">
         <div class="text-center mb-10">
             <h2 class="text-3xl font-semibold hover-scale">Hubungi Saya</h2>
