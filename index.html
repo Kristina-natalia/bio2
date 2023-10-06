@@ -4,101 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Saya</title>
-    <!-- Tambahkan link ke stylesheet Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Gaya tambahan untuk desain yang lebih menarik */
+        .hover-scale {
+            transition: transform 0.2s;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        .hover-rotate {
+            transition: transform 0.2s;
+        }
+        .hover-rotate:hover {
+            transform: rotate(5deg);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-100 font-sans">
 
 <!-- Navbar -->
-<nav class="bg-blue-500 p-4">
+<nav class="bg-gray-800 text-white py-4">
     <div class="container mx-auto flex justify-between items-center">
-        <a href="#" class="text-white text-2xl font-semibold">Profil Saya</a>
-        <div class="space-x-4">
-            <a href="#identitas-diri" class="text-white hover:underline">Identitas Diri</a>
-            <a href="#minat-hobi" class="text-white hover:underline">Minat dan Hobi</a>
-            <a href="#pendidikan" class="text-white hover:underline">Pendidikan</a>
-            <a href="#organisasi" class="text-white hover:underline">Pengalaman Organisasi</a>
-            <a href="#portofolio" class="text-white hover:underline">Portofolio</a>
-            <a href="#kontak" class="text-white hover:underline">Kontak</a>
-        </div>
+        <h1 class="text-2xl font-semibold">Profil Saya</h1>
+        <ul class="flex space-x-6">
+            <li><a href="#identitas" class="hover:text-gray-300">Identitas</a></li>
+            <li><a href="#minat-hobi" class="hover:text-gray-300">Minat & Hobi</a></li>
+            <li><a href="#pendidikan" class="hover:text-gray-300">Pendidikan</a></li>
+            <li><a href="#organisasi" class="hover:text-gray-300">Organisasi</a></li>
+            <li><a href="#portofolio" class="hover:text-gray-300">Portofolio</a></li>
+            <li><a href="#kontak" class="hover:text-gray-300">Kontak</a></li>
+        </ul>
     </div>
 </nav>
 
-<!-- Identitas Diri -->
-<section id="identitas-diri" class="bg-yellow-200 py-10">
+<!-- Identitas -->
+<section id="identitas" class="bg-gradient-to-r from-blue-600 to-blue-400 text-white py-20">
     <div class="container mx-auto text-center">
-        <h1 class="text-4xl font-semibold text-slate-900 mb-4">Tentang Saya</h1>
-        <p class="text-lg text-slate-700">Halo, nama saya adalah Kristina Natalia, dan saya lahir di Bandung pada tanggal 11 Desember 2003. Saya adalah seorang mahasiswa di Universitas Pendidikan Ganesha (UNDIKSHA), di mana saya sedang mengejar gelar dalam bidang Ilmu Komputer.</p>
+        <h2 class="text-4xl font-bold mb-4 hover-scale">Tentang Saya</h2>
+        <p class="text-lg hover-rotate">Halo, saya adalah Kristina Natalia. Mahasiswa program studi Ilmu Komputer.</p>
+        <p class="text-lg hover-rotate">Tempat, tanggal lahir: Bandung, 11 Desember 2003</p>
+        <p class="text-lg hover-rotate">Jenis Kelamin: Perempuan</p>
+        <p class="text-lg hover-rotate">Kewarganegaraan: Indonesia</p>
     </div>
 </section>
 
-<!-- Minat dan Hobi -->
-<section id="minat-hobi" class="bg-green-200 py-10">
-    <div class="container mx-auto">
-        <div class="text-center mb-10">
-            <h2 class="text-3xl text-slate-900 font-subtitle">Minat dan Hobi</h2>
-        </div>
-        <!-- Isi Minat dan Hobi -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <!-- Kewirausahaan -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="kewirausahaan.jpg" alt="Kewirausahaan" class="mx-auto w-20 h-20 object-cover rounded-full">
-                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Kewirausahaan</h3>
-                <p class="mt-2">Saya memiliki minat dalam kewirausahaan dan senang mengembangkan ide-ide bisnis yang kreatif.</p>
+<!-- Minat & Hobi -->
+<section id="minat-hobi" class="bg-gray-100 py-16">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-semibold mb-8 hover-scale">Minat & Hobi</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Minat & Hobi Items -->
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 hover-rotate">
+                <img src="icon-design.png" alt="Desain" class="mx-auto w-16 h-16 mb-4">
+                <p class="font-semibold">Desain</p>
             </div>
-
-            <!-- Menari -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="menari.jpg" alt="Menari" class="mx-auto w-20 h-20 object-cover rounded-full">
-                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Menari</h3>
-                <p class="mt-2">Menari adalah salah satu hobi saya. Saya sering mengikuti kelas tari untuk mengasah kemampuan menari saya.</p>
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 hover-rotate">
+                <img src="icon-dance.png" alt="Menari" class="mx-auto w-16 h-16 mb-4">
+                <p class="font-semibold">Menari</p>
             </div>
-
-            <!-- Membaca Buku -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="membaca.jpg" alt="Membaca Buku" class="mx-auto w-20 h-20 object-cover rounded-full">
-                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Membaca Buku</h3>
-                <p class="mt-2">Saya suka membaca berbagai jenis buku, terutama novel dan buku non-fiksi.</p>
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 hover-rotate">
+                <img src="icon-book.png" alt="Membaca Buku" class="mx-auto w-16 h-16 mb-4">
+                <p class="font-semibold">Membaca Buku</p>
             </div>
-
-            <!-- Traveling -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="traveling.jpg" alt="Traveling" class="mx-auto w-20 h-20 object-cover rounded-full">
-                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Traveling</h3>
-                <p class="mt-2">Saya senang berpergian dan menjelajahi tempat-tempat baru untuk mendapatkan pengalaman baru.</p>
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 hover-rotate">
+                <img src="icon-travel.png" alt="Traveling" class="mx-auto w-16 h-16 mb-4">
+                <p class="font-semibold">Traveling</p>
             </div>
-
-            <!-- Foodie -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="foodie.jpg" alt="Foodie" class="mx-auto w-20 h-20 object-cover rounded-full">
-                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Foodie</h3>
-                <p class="mt-2">Saya adalah seorang pecinta makanan dan senang mencoba hidangan dari berbagai masakan.</p>
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 hover-rotate">
+                <img src="icon-food.png" alt="Foodie" class="mx-auto w-16 h-16 mb-4">
+                <p class="font-semibold">Foodie</p>
             </div>
-
-            <!-- Menonton Film -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img src="menonton-film.jpg" alt="Menonton Film" class="mx-auto w-20 h-20 object-cover rounded-full">
-                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Menonton Film</h3>
-                <p class="mt-2">Saya juga menyukai menonton film, baik itu di bioskop maupun di rumah.</p>
+            <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 hover-rotate">
+                <img src="icon-movie.png" alt="Menonton Film" class="mx-auto w-16 h-16 mb-4">
+                <p class="font-semibold">Menonton Film</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Pendidikan -->
-<section id="pendidikan" class="bg-purple-200 py-10">
+<section id="pendidikan" class="bg-gray-200 py-16">
     <div class="container mx-auto">
-        <div class="text-center mb-10">
-            <h2 class="text-3xl text-slate-900 font-subtitle">Pendidikan</h2>
-        </div>
-        <!-- Tabel Pendidikan -->
-        <div class="w-9/12 mx-auto">
-            <table class="min-w-full bg-white rounded-lg overflow-hidden">
-                <thead class="bg-gray-100">
+        <h2 class="text-3xl font-semibold text-gray-800 text-center mb-8 hover-scale">Pendidikan</h2>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <table class="w-full table-auto">
+                <thead class="bg-gray-300">
                     <tr>
-                        <th class="text-left py-2 px-4 font-semibold text-slate-900">Tingkat Pendidikan</th>
-                        <th class="text-left py-2 px-4 font-semibold text-slate-900">Sekolah/Universitas</th>
-                        <th class="text-left py-2 px-4 font-semibold text-slate-900">Tahun</th>
+                        <th class="text-left py-2 px-4 font-semibold">Tingkat Pendidikan</th>
+                        <th class="text-left py-2 px-4 font-semibold">Sekolah/Universitas</th>
+                        <th class="text-left py-2 px-4 font-semibold">Tahun</th>
                     </tr>
                 </thead>
                 <tbody class="bg-white">
@@ -133,62 +128,74 @@
     </div>
 </section>
 
-<!-- Pengalaman Organisasi -->
-<section id="organisasi" class="bg-orange-200 py-10">
+<!-- Organisasi -->
+<section id="organisasi" class="bg-gray-100 py-16">
     <div class="container mx-auto">
-        <div class="text-center mb-10">
-            <h2 class="text-3xl text-slate-900 font-subtitle">Pengalaman Organisasi</h2>
-        </div>
-        <!-- Isi Pengalaman Organisasi -->
-        <div class="w-9/12 mx-auto">
-            <ul class="list-disc list-inside">
-                <li class="mb-2">Anggota aktif dalam Komunitas Ilmu Komputer UNDIKSHA.</li>
-                <li class="mb-2">Menjadi panitia dalam acara Seminar Teknologi Informasi 2023.</li>
-                <li class="mb-2">Bergabung dalam Tim Pengembangan Website Kampus.</li>
-            </ul>
+        <h2 class="text-3xl font-semibold text-gray-800 text-center mb-8 hover-scale">Pengalaman Organisasi</h2>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-semibold text-gray-800">Nama Organisasi</h3>
+            <p class="text-gray-600">Deskripsi singkat tentang pengalaman Anda dalam organisasi ini.</p>
         </div>
     </div>
 </section>
 
 <!-- Portofolio -->
-<section id="portofolio" class="bg-pink-200 py-10">
+<section id="portofolio" class="bg-gray-200 py-16">
     <div class="container mx-auto">
-        <div class="text-center mb-10">
-            <h2 class="text-3xl text-slate-900 font-subtitle">Portofolio</h2>
-        </div>
-        <!-- Tombol untuk masuk ke Portofolio -->
-        <div class="w-9/12 mx-auto">
-            <a href="#portofolio-link" class="bg-blue-500 text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-blue-600">Lihat Portofolio</a>
+        <h2 class="text-3xl font-semibold text-gray-800 text-center mb-8 hover-scale">Portofolio</h2>
+        <!-- Kemampuan -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Kemampuan</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <div class="group bg-gray-300 p-4 rounded-lg shadow-md hover:bg-blue-400 hover:text-white transition duration-300 cursor-pointer">
+                    <img src="html-certificate.png" alt="Sertifikat HTML" class="mx-auto w-20 h-20 mb-2">
+                    <p class="text-center font-semibold">HTML</p>
+                </div>
+                <div class="group bg-gray-300 p-4 rounded-lg shadow-md hover:bg-green-400 hover:text-white transition duration-300 cursor-pointer">
+                    <img src="cpp-certificate.png" alt="Sertifikat C++" class="mx-auto w-20 h-20 mb-2">
+                    <p class="text-center font-semibold">C++</p>
+                </div>
+                <div class="group bg-gray-300 p-4 rounded-lg shadow-md hover:bg-red-400 hover:text-white transition duration-300 cursor-pointer">
+                    <img src="css-certificate.png" alt="Sertifikat CSS" class="mx-auto w-20 h-20 mb-2">
+                    <p class="text-center font-semibold">CSS</p>
+                </div>
+                <div class="group bg-gray-300 p-4 rounded-lg shadow-md hover:bg-purple-400 hover:text-white transition duration-300 cursor-pointer">
+                    <img src="organization-certificate.png" alt="Sertifikat Organisasi" class="mx-auto w-20 h-20 mb-2">
+                    <p class="text-center font-semibold">Organisasi</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Kontak -->
-<section id="kontak" class="bg-yellow-200 py-10">
+<section id="kontak" class="bg-gradient-to-r from-red-600 to-red-400 text-white py-16">
     <div class="container mx-auto">
         <div class="text-center mb-10">
-            <h2 class="text-3xl text-slate-900 font-subtitle">Hubungi Saya</h2>
+            <h2 class="text-3xl font-semibold hover-scale">Hubungi Saya</h2>
         </div>
-        <!-- Isi Kontak -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
-            <!-- Instagram -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Instagram</h3>
-                <a href="https://instagram.com/kriss.laughs?igshid=MmU2YjMzNjRlOQ==" class="text-blue-600 hover:underline mt-2" target="_blank" rel="noopener noreferrer">kriss.laughs</a>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg hover-shadow-xl transition duration-300">
+                <h3 class="text-xl font-semibold text-white">Instagram</h3>
+                <a href="https://instagram.com/kriss.laughs?igshid=MmU2YjMzNjRlOQ==" class="text-blue-400 hover:underline mt-2 block" target="_blank" rel="noopener noreferrer">kriss.laughs</a>
             </div>
-            <!-- Email -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Email</h3>
-                <a href="mailto:tinabgn123@gmail.com" class="text-blue-600 hover:underline mt-2">tinabgn123@gmail.com</a>
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg hover-shadow-xl transition duration-300">
+                <h3 class="text-xl font-semibold text-white">Email</h3>
+                <a href="mailto:tinabgn123@gmail.com" class="text-blue-400 hover:underline mt-2 block">tinabgn123@gmail.com</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
-<footer class="bg-gray-200 py-4 text-center">
-    <p class="text-gray-600">&copy; 2023 Kristina Natalia. All rights reserved.</p>
-</footer>
+<!-- Script untuk efek gambar pop-up -->
+<script>
+    const popUpImages = document.querySelectorAll('.group');
+    popUpImages.forEach(image => {
+        image.addEventListener('click', () => {
+            image.querySelector('.opacity-0').classList.toggle('opacity-100');
+        });
+    });
+</script>
 
 </body>
 </html>
