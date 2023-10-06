@@ -3,133 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya</title>
+    <!-- Tambahkan link ke stylesheet Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-    <title>Profil Pribadi</title>
 </head>
-<body class="bg-gray-100">
-    <!-- Navigation Bar -->
-    <nav class="bg-blue-500 p-4 text-white">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold">Profil Saya</a>
-            <a href="/portfolio" class="text-xl hover:underline">Portofolio</a>
+<body>
+
+<!-- Navbar -->
+<nav class="bg-blue-500 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-white text-2xl font-semibold">Profil Saya</a>
+        <div class="space-x-4">
+            <a href="#identitas-diri" class="text-white hover:underline">Identitas Diri</a>
+            <a href="#minat-hobi" class="text-white hover:underline">Minat dan Hobi</a>
+            <a href="#pendidikan" class="text-white hover:underline">Pendidikan</a>
+            <a href="#organisasi" class="text-white hover:underline">Pengalaman Organisasi</a>
+            <a href="#portofolio" class="text-white hover:underline">Portofolio</a>
+            <a href="#kontak" class="text-white hover:underline">Kontak</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Content -->
-    <div class="container mx-auto py-10">
-        <div class="bg-white rounded-lg shadow-lg p-8">
-            <h1 class="text-3xl font-bold text-gray-800 mb-4">Tentang Saya</h1>
-            <p class="text-gray-600 mb-6">
-                Halo, nama saya adalah Kristina Natalia, dan saya lahir di Bandung pada tanggal 11 Desember 2003.
-                Saya saat ini adalah seorang mahasiswa di Universitas Pendidikan Ganesha (UNDIKSHA), di mana saya sedang mengejar gelar dalam bidang Ilmu Komputer.
-            </p>
+<!-- Identitas Diri -->
+<section id="identitas-diri" class="bg-yellow-200 py-10">
+    <div class="container mx-auto text-center">
+        <h1 class="text-4xl font-semibold text-slate-900 mb-4">Tentang Saya</h1>
+        <p class="text-lg text-slate-700">Halo, nama saya adalah Kristina Natalia, dan saya lahir di Bandung pada tanggal 11 Desember 2003. Saya adalah seorang mahasiswa di Universitas Pendidikan Ganesha (UNDIKSHA), di mana saya sedang mengejar gelar dalam bidang Ilmu Komputer.</p>
+    </div>
+</section>
 
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Minat dan Bakat Saya</h2>
-            <ul class="list-disc ml-8 text-gray-600 mb-6">
-                <li>Desain Grafis</li>
-                <li>Bermain Game</li>
-                <li>Mengoleksi Novel</li>
-            </ul>
+<!-- Minat dan Hobi -->
+<section id="minat-hobi" class="bg-green-200 py-10">
+    <div class="container mx-auto">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl text-slate-900 font-subtitle">Minat dan Hobi</h2>
+        </div>
+        <!-- Isi Minat dan Hobi -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Kewirausahaan -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img src="kewirausahaan.jpg" alt="Kewirausahaan" class="mx-auto w-20 h-20 object-cover rounded-full">
+                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Kewirausahaan</h3>
+                <p class="mt-2">Saya memiliki minat dalam kewirausahaan dan senang mengembangkan ide-ide bisnis yang kreatif.</p>
+            </div>
 
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Pendidikan</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <!-- Education Item 1 -->
-                <div class="bg-yellow-200 p-4 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">TK</h3>
-                    <p class="text-gray-600 mb-2">Kartika 19 Bandung</p>
-                    <p class="text-gray-600">2009-2010</p>
-                </div>
-                <!-- Education Item 2 -->
-                <div class="bg-yellow-200 p-4 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">SD</h3>
-                    <p class="text-gray-600 mb-2">SDN 0408232 Kabanjahe</p>
-                    <p class="text-gray-600">2010-2016</p>
-                </div>
-                <!-- Education Item 3 -->
-                <div class="bg-yellow-200 p-4 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">SMP</h3>
-                    <p class="text-gray-600 mb-2">SMPN 3 Berastagi</p>
-                    <p class="text-gray-600">2016-2018</p>
-                </div>
-                <!-- Education Item 4 -->
-                <div class="bg-yellow-200 p-4 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">SMA</h3>
-                    <p class="text-gray-600 mb-2">SMA Swasta Santa Maria Kabanjahe</p>
-                    <p class="text-gray-600">2019-2021</p>
-                </div>
-                <!-- Education Item 5 -->
-                <div class="bg-yellow-200 p-4 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Universitas</h3>
-                    <p class="text-gray-600 mb-2">Universitas Pendidikan Ganesha</p>
-                    <p class="text-gray-600">2022-Sekarang</p>
-                </div>
+            <!-- Menari -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img src="menari.jpg" alt="Menari" class="mx-auto w-20 h-20 object-cover rounded-full">
+                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Menari</h3>
+                <p class="mt-2">Menari adalah salah satu hobi saya. Saya sering mengikuti kelas tari untuk mengasah kemampuan menari saya.</p>
+            </div>
+
+            <!-- Membaca Buku -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img src="membaca.jpg" alt="Membaca Buku" class="mx-auto w-20 h-20 object-cover rounded-full">
+                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Membaca Buku</h3>
+                <p class="mt-2">Saya suka membaca berbagai jenis buku, terutama novel dan buku non-fiksi.</p>
+            </div>
+
+            <!-- Traveling -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img src="traveling.jpg" alt="Traveling" class="mx-auto w-20 h-20 object-cover rounded-full">
+                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Traveling</h3>
+                <p class="mt-2">Saya senang berpergian dan menjelajahi tempat-tempat baru untuk mendapatkan pengalaman baru.</p>
+            </div>
+
+            <!-- Foodie -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img src="foodie.jpg" alt="Foodie" class="mx-auto w-20 h-20 object-cover rounded-full">
+                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Foodie</h3>
+                <p class="mt-2">Saya adalah seorang pecinta makanan dan senang mencoba hidangan dari berbagai masakan.</p>
+            </div>
+
+            <!-- Menonton Film -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img src="menonton-film.jpg" alt="Menonton Film" class="mx-auto w-20 h-20 object-cover rounded-full">
+                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Menonton Film</h3>
+                <p class="mt-2">Saya juga menyukai menonton film, baik itu di bioskop maupun di rumah.</p>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- Portfolio Button -->
-    <div class="container mx-auto py-4 text-center">
-        <a href="/portfolio" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">
-            Lihat Portofolio Saya
-        </a>
-    </div>
-
-    <!-- Portfolio Page -->
-    <div class="container mx-auto py-10">
-        <div class="bg-white rounded-lg shadow-lg p-8">
-            <h1 class="text-3xl font-bold text-gray-800 mb-4">Portofolio</h1>
-            <p class="text-gray-600 mb-6">
-                Ini adalah beberapa proyek terbaru saya. Silakan klik pada proyek untuk melihat lebih lanjut.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Portfolio Item 1 -->
-                <div class="portfolio-item bg-gray-100 p-4 rounded-lg shadow-lg">
-                    <a href="#" class="block">
-                        <img src="assets/imgs/portfolio-1.jpg" alt="Portfolio 1" class="w-full rounded-lg mb-4">
-                        <h3 class="text-xl font-semibold text-gray-800">Situs Web Perusahaan</h3>
-                        <p class="text-gray-600 mt-2">Situs web modern untuk perusahaan teknologi terkemuka.</p>
-                    </a>
-                </div>
-                <!-- Portfolio Item 2 -->
-                <div class="portfolio-item bg-gray-100 p-4 rounded-lg shadow-lg">
-                    <a href="#" class="block">
-                        <img src="assets/imgs/portfolio-2.jpg" alt="Portfolio 2" class="w-full rounded-lg mb-4">
-                        <h3 class="text-xl font-semibold text-gray-800">Aplikasi Mobile E-commerce</h3>
-                        <p class="text-gray-600 mt-2">Aplikasi mobile yang memudahkan belanja online.</p>
-                    </a>
-                </div>
-                <!-- Portfolio Item 3 -->
-                <div class="portfolio-item bg-gray-100 p-4 rounded-lg shadow-lg">
-                    <a href="#" class="block">
-                        <img src="assets/imgs/portfolio-3.jpg" alt="Portfolio 3" class="w-full rounded-lg mb-4">
-                        <h3 class="text-xl font-semibold text-gray-800">Aplikasi Manajemen Tugas</h3>
-                        <p class="text-gray-600 mt-2">Aplikasi untuk mengatur tugas dan pekerjaan sehari-hari.</p>
-                    </a>
-                </div>
-            </div>
+<!-- Pendidikan -->
+<section id="pendidikan" class="bg-purple-200 py-10">
+    <div class="container mx-auto">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl text-slate-900 font-subtitle">Pendidikan</h2>
         </div>
-    </div>
-
-    <!-- Contact Page -->
-    <section id="contact" class="bg-yellow-200 py-20">
+        <!-- Tabel Pendidikan -->
         <div class="w-9/12 mx-auto">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl text-slate-900 font-subtitle">Hubungi Saya</h2>
+            <table class="min-w-full bg-white rounded-lg overflow-hidden">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="text-left py-2 px-4 font-semibold text-slate-900">Tingkat Pendidikan</th>
+                        <th class="text-left py-2 px-4 font-semibold text-slate-900">Sekolah/Universitas</th>
+                        <th class="text-left py-2 px-4 font-semibold text-slate-900">Tahun</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white">
+                    <tr>
+                        <td class="text-left py-2 px-4">TK</td>
+                        <td class="text-left py-2 px-4">Kartika 19 Bandung</td>
+                        <td class="text-left py-2 px-4">2009-2010</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left py-2 px-4">SD</td>
+                        <td class="text-left py-2 px-4">SDN 0408232 Kabanjahe</td>
+                        <td class="text-left py-2 px-4">2010-2016</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left py-2 px-4">SMP</td>
+                        <td class="text-left py-2 px-4">SMPN 3 Berastagi</td>
+                        <td class="text-left py-2 px-4">2016-2018</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left py-2 px-4">SMA</td>
+                        <td class="text-left py-2 px-4">SMA Swasta Santa Maria Kabanjahe</td>
+                        <td class="text-left py-2 px-4">2019-2021</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left py-2 px-4">Universitas</td>
+                        <td class="text-left py-2 px-4">Universitas Pendidikan Ganesha</td>
+                        <td class="text-left py-2 px-4">2022-Sekarang</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Pengalaman Organisasi -->
+<section id="organisasi" class="bg-orange-200 py-10">
+    <div class="container mx-auto">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl text-slate-900 font-subtitle">Pengalaman Organisasi</h2>
+        </div>
+        <!-- Isi Pengalaman Organisasi -->
+        <div class="w-9/12 mx-auto">
+            <ul class="list-disc list-inside">
+                <li class="mb-2">Anggota aktif dalam Komunitas Ilmu Komputer UNDIKSHA.</li>
+                <li class="mb-2">Menjadi panitia dalam acara Seminar Teknologi Informasi 2023.</li>
+                <li class="mb-2">Bergabung dalam Tim Pengembangan Website Kampus.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Portofolio -->
+<section id="portofolio" class="bg-pink-200 py-10">
+    <div class="container mx-auto">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl text-slate-900 font-subtitle">Portofolio</h2>
+        </div>
+        <!-- Tombol untuk masuk ke Portofolio -->
+        <div class="w-9/12 mx-auto">
+            <a href="#portofolio-link" class="bg-blue-500 text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-blue-600">Lihat Portofolio</a>
+        </div>
+    </div>
+</section>
+
+<!-- Kontak -->
+<section id="kontak" class="bg-yellow-200 py-10">
+    <div class="container mx-auto">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl text-slate-900 font-subtitle">Hubungi Saya</h2>
+        </div>
+        <!-- Isi Kontak -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
+            <!-- Instagram -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Instagram</h3>
+                <a href="https://instagram.com/kriss.laughs?igshid=MmU2YjMzNjRlOQ==" class="text-blue-600 hover:underline mt-2" target="_blank" rel="noopener noreferrer">kriss.laughs</a>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Instagram</h3>
-                    <a href="https://instagram.com/kriss.laughs?igshid=MmU2YjMzNjRlOQ=="
-                        class="text-blue-600 hover:underline mt-2" target="_blank"
-                        rel="noopener noreferrer">kriss.laughs</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Email</h3>
-                    <a href="mailto:tinabgn123@gmail.com" class="text-blue-600 hover:underline mt-2">tinabgn123@gmail.com</a>
-                </div>
+            <!-- Email -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-slate-900 font-subtitle">Email</h3>
+                <a href="mailto:tinabgn123@gmail.com" class="text-blue-600 hover:underline mt-2">tinabgn123@gmail.com</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-200 py-4 text-center">
+    <p class="text-gray-600">&copy; 2023 Kristina Natalia. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
