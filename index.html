@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +11,17 @@
         /* Gaya font yang berbeda */
         .font-bold {
             font-weight: bold;
-            color: #fff; /* Warna font berbeda */
+            color: #ffffff;
         }
 
         .font-italic {
             font-style: italic;
-            color: #eee; /* Warna font berbeda */
+            color: #ffffff;
         }
 
         .font-fancy {
             font-family: Cursive, sans-serif;
-            color: #c0392b; /* Warna font berbeda */
+            color: #ffffff;
         }
 
         /* Gaya link yang interaktif */
@@ -33,23 +34,29 @@
             text-decoration: underline;
         }
 
-        /* Perkecil tampilan navbar */
+        /* Gaya navbar */
         .navbar {
-            background-color: #2c3e50; /* Warna latar belakang navbar */
+            background-color: #222;
             padding: 10px;
             display: flex;
             justify-content: flex-start;
-            align-items: center;
         }
 
         .navbar a {
             margin-right: 15px;
-            color: #fff; /* Warna teks navbar */
-            text-decoration: none;
-            font-weight: bold;
+            color: #ffffff;
         }
 
-        /* Tambahkan efek pop-up */
+        /* Gaya untuk setiap bagian */
+        .section-title {
+            color: #3498db;
+        }
+
+        .section-content {
+            color: #333;
+        }
+
+        /* Gaya popup */
         .popup {
             display: none;
             position: fixed;
@@ -57,58 +64,21 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5);
             align-items: center;
-            z-index: 999;
+            justify-content: center;
+            z-index: 1;
         }
 
         .popup-content {
             background-color: #fff;
             padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        /* Gaya teks dan latar belakang untuk setiap bagian */
-        .section-title {
-            color: #3498db; /* Warna teks judul */
-        }
-
-        .section-content {
-            color: #333; /* Warna teks konten */
-        }
-
-        /* Warna latar belakang untuk setiap bagian */
-        #identitas {
-            background-color: #ecf0f1; /* Warna latar belakang identitas */
-        }
-
-        #minat-hobi {
-            background-color: #f39c12; /* Warna latar belakang minat & hobi */
-        }
-
-        #pendidikan {
-            background-color: #27ae60; /* Warna latar belakang pendidikan */
-        }
-
-        #organisasi {
-            background-color: #8e44ad; /* Warna latar belakang organisasi */
-        }
-
-        #portofolio {
-            background-color: #d35400; /* Warna latar belakang portofolio */
-        }
-
-        #sertifikat {
-            background-color: #16a085; /* Warna latar belakang sertifikat */
-        }
-
-        #kontak {
-            background-color: #c0392b; /* Warna latar belakang kontak */
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
+
 <body>
     <!-- Navbar -->
     <div class="navbar">
@@ -122,7 +92,7 @@
     </div>
 
     <!-- Identitas -->
-    <section id="identitas" class="bg-gray-100 py-20">
+    <section id="identitas" class="bg-gray-900 py-20 text-white">
         <div class="w-9/12 mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center section-title">Tentang Saya</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -145,47 +115,47 @@
     </section>
 
     <!-- Minat & Hobi -->
-    <section id="minat-hobi" class="py-20">
+    <section id="minat-hobi" class="bg-blue-900 py-20 text-white">
         <div class="w-9/12 mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center section-title">Minat dan Hobi</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="desain.jpg" alt="Desain Grafis" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-blue-600 bg-opacity-80 text-white text-2xl font-bold transition-opacity duration-300 popup-content" onclick="togglePopup('popup-desain')">Desain Grafis</p>
+                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300 section-content" onclick="togglePopup('popup-desain')">Desain Grafis</p>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="game.jpg" alt="Bermain Game" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-orange-500 bg-opacity-80 text-white text-2xl font-bold transition-opacity duration-300 popup-content" onclick="togglePopup('popup-game')">Bermain Game</p>
+                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300 section-content" onclick="togglePopup('popup-game')">Bermain Game</p>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="novel.jpg" alt="Mengoleksi Novel" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-yellow-500 bg-opacity-80 text-white text-2xl font-bold transition-opacity duration-300 popup-content" onclick="togglePopup('popup-novel')">Mengoleksi Novel</p>
+                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300 section-content" onclick="togglePopup('popup-novel')">Mengoleksi Novel</p>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="menari.jpg" alt="Menari" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-purple-600 bg-opacity-80 text-white text-2xl font-bold transition-opacity duration-300 popup-content" onclick="togglePopup('popup-menari')">Menari</p>
+                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300 section-content" onclick="togglePopup('popup-menari')">Menari</p>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="buku.jpg" alt="Membaca Buku" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-red-600 bg-opacity-80 text-white text-2xl font-bold transition-opacity duration-300 popup-content" onclick="togglePopup('popup-buku')">Membaca Buku</p>
+                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300 section-content" onclick="togglePopup('popup-buku')">Membaca Buku</p>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="travel.jpg" alt="Traveling" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-green-600 bg-opacity-80 text-white text-2xl font-bold transition-opacity duration-300 popup-content" onclick="togglePopup('popup-travel')">Traveling</p>
+                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300 section-content" onclick="togglePopup('popup-travel')">Traveling</p>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="foodie.jpg" alt="Foodie" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-pink-600 bg-opacity-80 text-white text-2xl font-bold transition-opacity duration-300 popup-content" onclick="togglePopup('popup-foodie')">Foodie</p>
+                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300 section-content" onclick="togglePopup('popup-foodie')">Foodie</p>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="film.jpg" alt="Menonton Film" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-blue-900 bg-opacity-80 text-white text-2xl font-bold transition-opacity duration-300 popup-content" onclick="togglePopup('popup-film')">Menonton Film</p>
+                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300 section-content" onclick="togglePopup('popup-film')">Menonton Film</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pop-up Minat & Hobi -->
+    <!-- Popup untuk Minat & Hobi -->
     <div id="popup-desain" class="popup">
         <div class="popup-content">
             <h3 class="text-xl font-semibold mb-2 popup-content">Desain Grafis</h3>
@@ -197,54 +167,54 @@
         <div class="popup-content">
             <h3 class="text-xl font-semibold mb-2 popup-content">Bermain Game</h3>
             <p class="text-lg popup-content">Deskripsi tentang minat dan hobi dalam Bermain Game.</p>
-            <button class="mt-4 bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-game')">Tutup</button>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-game')">Tutup</button>
         </div>
     </div>
     <div id="popup-novel" class="popup">
         <div class="popup-content">
             <h3 class="text-xl font-semibold mb-2 popup-content">Mengoleksi Novel</h3>
             <p class="text-lg popup-content">Deskripsi tentang minat dan hobi dalam Mengoleksi Novel.</p>
-            <button class="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-novel')">Tutup</button>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-novel')">Tutup</button>
         </div>
     </div>
     <div id="popup-menari" class="popup">
         <div class="popup-content">
             <h3 class="text-xl font-semibold mb-2 popup-content">Menari</h3>
             <p class="text-lg popup-content">Deskripsi tentang minat dan hobi dalam Menari.</p>
-            <button class="mt-4 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-menari')">Tutup</button>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-menari')">Tutup</button>
         </div>
     </div>
     <div id="popup-buku" class="popup">
         <div class="popup-content">
             <h3 class="text-xl font-semibold mb-2 popup-content">Membaca Buku</h3>
             <p class="text-lg popup-content">Deskripsi tentang minat dan hobi dalam Membaca Buku.</p>
-            <button class="mt-4 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-buku')">Tutup</button>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-buku')">Tutup</button>
         </div>
     </div>
     <div id="popup-travel" class="popup">
         <div class="popup-content">
             <h3 class="text-xl font-semibold mb-2 popup-content">Traveling</h3>
             <p class="text-lg popup-content">Deskripsi tentang minat dan hobi dalam Traveling.</p>
-            <button class="mt-4 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-travel')">Tutup</button>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-travel')">Tutup</button>
         </div>
     </div>
     <div id="popup-foodie" class="popup">
         <div class="popup-content">
             <h3 class="text-xl font-semibold mb-2 popup-content">Foodie</h3>
-            <p class="text-lg popup-content">Deskripsi tentang minat dan hobi sebagai Foodie.</p>
-            <button class="mt-4 bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-foodie')">Tutup</button>
+            <p class="text-lg popup-content">Deskripsi tentang minat dan hobi dalam Foodie.</p>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-foodie')">Tutup</button>
         </div>
     </div>
     <div id="popup-film" class="popup">
         <div class="popup-content">
             <h3 class="text-xl font-semibold mb-2 popup-content">Menonton Film</h3>
             <p class="text-lg popup-content">Deskripsi tentang minat dan hobi dalam Menonton Film.</p>
-            <button class="mt-4 bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-film')">Tutup</button>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-film')">Tutup</button>
         </div>
     </div>
 
     <!-- Pendidikan -->
-    <section id="pendidikan" class="bg-green-800 py-20">
+    <section id="pendidikan" class="bg-gray-900 py-20 text-white">
         <div class="w-9/12 mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center section-title">Pendidikan</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -278,142 +248,169 @@
     </section>
 
     <!-- Organisasi -->
-    <section id="organisasi" class="bg-purple-900 py-20">
+    <section id="organisasi" class="bg-gray-900 py-20 text-white">
         <div class="w-9/12 mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center section-title">Organisasi</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-gray-300 p-6 rounded-lg shadow-lg">
+                <div class="bg-gray-600 p-6 rounded-lg shadow-lg relative overflow-hidden">
                     <h3 class="text-xl font-semibold mb-2 section-content">Organisasi 1</h3>
                     <p class="text-lg section-content">Deskripsi Organisasi 1</p>
                     <p class="text-gray-500 section-content">Tahun Bergabung: 20XX</p>
+                    <div class="popup-btn absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center opacity-0 hover:opacity-100 bg-black bg-opacity-50 transition-opacity duration-300" onclick="togglePopup('popup-organisasi1')">Lihat Detail</div>
                 </div>
-                <div class="bg-gray-400 p-6 rounded-lg shadow-lg">
+                <div class="bg-gray-600 p-6 rounded-lg shadow-lg relative overflow-hidden">
                     <h3 class="text-xl font-semibold mb-2 section-content">Organisasi 2</h3>
                     <p class="text-lg section-content">Deskripsi Organisasi 2</p>
                     <p class="text-gray-500 section-content">Tahun Bergabung: 20XX</p>
-                </div>
-                <div class="bg-gray-500 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2 section-content">Organisasi 3</h3>
-                    <p class="text-lg section-content">Deskripsi Organisasi 3</p>
-                    <p class="text-gray-500 section-content">Tahun Bergabung: 20XX</p>
+                    <div class="popup-btn absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center opacity-0 hover:opacity-100 bg-black bg-opacity-50 transition-opacity duration-300" onclick="togglePopup('popup-organisasi2')">Lihat Detail</div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Popup untuk Organisasi -->
+    <div id="popup-organisasi1" class="popup">
+        <div class="popup-content">
+            <h3 class="text-xl font-semibold mb-2 popup-content">Organisasi 1</h3>
+            <p class="text-lg popup-content">Deskripsi tentang Organisasi 1.</p>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-organisasi1')">Tutup</button>
+        </div>
+    </div>
+    <div id="popup-organisasi2" class="popup">
+        <div class="popup-content">
+            <h3 class="text-xl font-semibold mb-2 popup-content">Organisasi 2</h3>
+            <p class="text-lg popup-content">Deskripsi tentang Organisasi 2.</p>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-organisasi2')">Tutup</button>
+        </div>
+    </div>
+
     <!-- Portofolio -->
-    <section id="portofolio" class="bg-orange-600 py-20">
+    <section id="portofolio" class="bg-gray-900 py-20 text-white">
         <div class="w-9/12 mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center section-title">Portofolio</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="portofolio1.jpg" alt="Portofolio 1" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-red-800 bg-opacity-80 text-white text-2xl font-bold transition-opacity duration-300 popup-content" onclick="togglePopup('popup-portofolio1')">Proyek 1</p>
+                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300 section-content" onclick="togglePopup('popup-portofolio1')">Portofolio 1</p>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="portofolio2.jpg" alt="Portofolio 2" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-yellow-800 bg-opacity-80 text-white text-2xl font-bold transition-opacity duration-300 popup-content" onclick="togglePopup('popup-portofolio2')">Proyek 2</p>
+                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300 section-content" onclick="togglePopup('popup-portofolio2')">Portofolio 2</p>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="portofolio3.jpg" alt="Portofolio 3" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-blue-800 bg-opacity-80 text-white text-2xl font-bold transition-opacity duration-300 popup-content" onclick="togglePopup('popup-portofolio3')">Proyek 3</p>
+                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300 section-content" onclick="togglePopup('popup-portofolio3')">Portofolio 3</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pop-up Portofolio -->
+    <!-- Popup untuk Portofolio -->
     <div id="popup-portofolio1" class="popup">
         <div class="popup-content">
-            <h3 class="text-xl font-semibold mb-2 popup-content">Proyek 1</h3>
-            <p class="text-lg popup-content">Deskripsi proyek pertama dalam portofolio.</p>
-            <button class="mt-4 bg-red-800 hover:bg-red-900 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-portofolio1')">Tutup</button>
+            <h3 class="text-xl font-semibold mb-2 popup-content">Portofolio 1</h3>
+            <p class="text-lg popup-content">Deskripsi tentang Portofolio 1.</p>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-portofolio1')">Tutup</button>
         </div>
     </div>
     <div id="popup-portofolio2" class="popup">
         <div class="popup-content">
-            <h3 class="text-xl font-semibold mb-2 popup-content">Proyek 2</h3>
-            <p class="text-lg popup-content">Deskripsi proyek kedua dalam portofolio.</p>
-            <button class="mt-4 bg-yellow-800 hover:bg-yellow-900 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-portofolio2')">Tutup</button>
+            <h3 class="text-xl font-semibold mb-2 popup-content">Portofolio 2</h3>
+            <p class="text-lg popup-content">Deskripsi tentang Portofolio 2.</p>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-portofolio2')">Tutup</button>
         </div>
     </div>
     <div id="popup-portofolio3" class="popup">
         <div class="popup-content">
-            <h3 class="text-xl font-semibold mb-2 popup-content">Proyek 3</h3>
-            <p class="text-lg popup-content">Deskripsi proyek ketiga dalam portofolio.</p>
-            <button class="mt-4 bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-portofolio3')">Tutup</button>
+            <h3 class="text-xl font-semibold mb-2 popup-content">Portofolio 3</h3>
+            <p class="text-lg popup-content">Deskripsi tentang Portofolio 3.</p>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-portofolio3')">Tutup</button>
         </div>
     </div>
 
     <!-- Sertifikat -->
-    <section id="sertifikat" class="bg-indigo-800 py-20">
+    <section id="sertifikat" class="bg-gray-900 py-20 text-white">
         <div class="w-9/12 mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center section-title">Sertifikat</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="sertifikat1.jpg" alt="Sertifikat 1" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-purple-900 bg-opacity-80 text-white text-2xl font-bold transition-opacity duration-300 popup-content" onclick="togglePopup('popup-sertifikat1')">Sertifikat 1</p>
+                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300 section-content" onclick="togglePopup('popup-sertifikat1')">Sertifikat 1</p>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="sertifikat2.jpg" alt="Sertifikat 2" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-yellow-900 bg-opacity-80 text-white text-2xl font-bold transition-opacity duration-300 popup-content" onclick="togglePopup('popup-sertifikat2')">Sertifikat 2</p>
+                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300 section-content" onclick="togglePopup('popup-sertifikat2')">Sertifikat 2</p>
                 </div>
                 <div class="group relative cursor-pointer transform transition-transform hover:scale-105">
                     <img src="sertifikat3.jpg" alt="Sertifikat 3" class="w-full rounded-lg">
-                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-green-900 bg-opacity-80 text-white text-2xl font-bold transition-opacity duration-300 popup-content" onclick="togglePopup('popup-sertifikat3')">Sertifikat 3</p>
+                    <p class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-60 text-white text-2xl font-bold transition-opacity duration-300 section-content" onclick="togglePopup('popup-sertifikat3')">Sertifikat 3</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pop-up Sertifikat -->
+    <!-- Popup untuk Sertifikat -->
     <div id="popup-sertifikat1" class="popup">
         <div class="popup-content">
             <h3 class="text-xl font-semibold mb-2 popup-content">Sertifikat 1</h3>
-            <p class="text-lg popup-content">Deskripsi sertifikat pertama.</p>
-            <button class="mt-4 bg-purple-900 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-sertifikat1')">Tutup</button>
+            <p class="text-lg popup-content">Deskripsi tentang Sertifikat 1.</p>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-sertifikat1')">Tutup</button>
         </div>
     </div>
     <div id="popup-sertifikat2" class="popup">
         <div class="popup-content">
             <h3 class="text-xl font-semibold mb-2 popup-content">Sertifikat 2</h3>
-            <p class="text-lg popup-content">Deskripsi sertifikat kedua.</p>
-            <button class="mt-4 bg-yellow-900 hover:bg-yellow-800 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-sertifikat2')">Tutup</button>
+            <p class="text-lg popup-content">Deskripsi tentang Sertifikat 2.</p>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-sertifikat2')">Tutup</button>
         </div>
     </div>
     <div id="popup-sertifikat3" class="popup">
         <div class="popup-content">
             <h3 class="text-xl font-semibold mb-2 popup-content">Sertifikat 3</h3>
-            <p class="text-lg popup-content">Deskripsi sertifikat ketiga.</p>
-            <button class="mt-4 bg-green-900 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-sertifikat3')">Tutup</button>
+            <p class="text-lg popup-content">Deskripsi tentang Sertifikat 3.</p>
+            <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="togglePopup('popup-sertifikat3')">Tutup</button>
         </div>
     </div>
 
     <!-- Kontak -->
-    <section id="kontak" class="bg-red-800 py-20">
+    <section id="kontak" class="bg-gray-900 py-20 text-white">
         <div class="w-9/12 mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center section-title">Kontak</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                     <h3 class="text-2xl font-semibold mb-2 section-content">Hubungi Saya</h3>
-                    <p class="text-lg section-content">Email: <a href="mailto:kristina@example.com" class="text-blue-500 hover:underline">kristina@example.com</a></p>
-                    <p class="text-lg section-content">Telepon: <a href="tel:+123456789" class="text-blue-500 hover:underline">+123456789</a></p>
+                    <p class="text-lg section-content">
+                        Anda dapat menghubungi saya melalui email atau media sosial berikut:
+                    </p>
+                    <ul class="list-disc pl-6 text-lg section-content">
+                        <li>Email: example@example.com</li>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/example" class="text-blue-400">linkedin.com/in/example</a></li>
+                        <li>Twitter: <a href="https://twitter.com/example" class="text-blue-400">@example</a></li>
+                    </ul>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-semibold mb-2 section-content">Media Sosial</h3>
-                    <p class="text-lg section-content"><a href="#" class="text-blue-500 hover:underline">LinkedIn</a></p>
-                    <p class="text-lg section-content"><a href="#" class="text-blue-500 hover:underline">Twitter</a></p>
+                    <h3 class="text-2xl font-semibold mb-2 section-content">Alamat</h3>
+                    <p class="text-lg section-content">
+                        Alamat saya adalah:
+                    </p>
+                    <address class="text-lg section-content">
+                        Jl. Contoh No. 123<br>
+                        Kota Contoh<br>
+                        Provinsi Contoh<br>
+                        Kode Pos: 12345
+                    </address>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Script untuk menampilkan/menyembunyikan pop-up -->
+    <!-- JavaScript untuk menampilkan dan menyembunyikan popup -->
     <script>
         function togglePopup(popupId) {
-            const popup = document.getElementById(popupId);
-            popup.style.display = popup.style.display === "block" ? "none" : "block";
+            var popup = document.getElementById(popupId);
+            popup.style.display = (popup.style.display === "block") ? "none" : "block";
         }
     </script>
 </body>
+
 </html>
