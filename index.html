@@ -4,97 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio - [Nama Anda]</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.15/tailwind.min.css">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
     <style>
         /* Gradien Biru Cantik */
         body {
             background: linear-gradient(135deg, #3498db, #2980b9);
+            font-family: Arial, sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
         }
-        .bg-custom {
-            background: linear-gradient(135deg, #3498db, #2980b9);
+        /* Header */
+        header {
+            text-align: center;
+            padding: 100px 0;
         }
-        /* Ubah Warna Teks */
-        .text-custom {
-            color: #ffffff; /* Putih */
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
         }
-        /* Tombol Kustom */
-        .btn-custom {
-            background-color: #ffffff; /* Putih */
-            color: #3498db; /* Biru */
+        header p {
+            font-size: 1.5rem;
         }
-        .btn-custom:hover {
-            background-color: #2980b9; /* Biru Tua */
+        /* Container */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Section */
+        .section {
+            padding: 60px 0;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.25rem;
+            line-height: 1.5;
+        }
+        /* Button */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 20px;
+            list-style: none;
+        }
+        .timeline li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+        .timeline li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+        /* Hobi */
+        .hobbies {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .hobby {
+            background-color: #fff;
+            color: #3498db;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            padding: 5px 15px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .hobby:hover {
+            background-color: #2980b9;
+            color: #fff;
         }
     </style>
 </head>
-<body class="text-custom">
+<body>
     <!-- Header -->
-    <header class="bg-custom text-center py-16">
-        <h1 class="text-4xl font-bold mb-4">[Nama Anda]</h1>
-        <p class="text-xl">Mahasiswa Ilmu Komputer di UNDIKSHA</p>
+    <header>
+        <h1>[Nama Anda]</h1>
+        <p>Mahasiswa Ilmu Komputer di UNDIKSHA</p>
     </header>
 
-    <!-- About Me -->
-    <section id="about" class="py-12">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-serif text-custom mb-6">Tentang Saya</h2>
-            <p class="text-lg leading-relaxed mb-6">Saya adalah mahasiswa Ilmu Komputer di UNDIKSHA dengan minat dalam pemrograman, kecerdasan buatan, analisis data, dan keamanan komputer. Saya aktif dalam kegiatan akademik dan berharap dapat menggabungkan minat dan hobi saya dengan ilmu komputer untuk menciptakan peluang baru dan inovasi dalam industri ini.</p>
-            <p class="text-lg leading-relaxed">Selain belajar, saya juga memiliki minat dalam berbagai hal seperti membaca buku, traveling, kuliner, dan menonton film. Saya berusaha untuk terus berkembang dan berkontribusi pada perkembangan teknologi informasi di masa depan.</p>
-        </div>
+    <!-- Tentang Saya -->
+    <section id="about" class="container section">
+        <h2>Tentang Saya</h2>
+        <p>
+            Saya adalah mahasiswa Ilmu Komputer di UNDIKSHA dengan minat dalam pemrograman, kecerdasan buatan, analisis data, dan keamanan komputer. Saya aktif dalam kegiatan akademik dan berharap dapat menggabungkan minat dan hobi saya dengan ilmu komputer untuk menciptakan peluang baru dan inovasi dalam industri ini.
+        </p>
+        <p>
+            Selain belajar, saya juga memiliki minat dalam berbagai hal seperti membaca buku, traveling, kuliner, dan menonton film. Saya berusaha untuk terus berkembang dan berkontribusi pada perkembangan teknologi informasi di masa depan.
+        </p>
     </section>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="py-16">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-serif text-custom text-center mb-10">Portofolio</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Portfolio Item 1 -->
-                <div class="relative group">
-                    <img class="w-full h-auto rounded-lg transform scale-100 transition-transform duration-300 group-hover:scale-105" src="images/portfolio-1.jpg" alt="Portfolio Item 1">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex justify-center items-center">
-                        <a href="portfolio-item-1.html" class="text-white text-xl font-semibold hover:underline">Lihat Detail</a>
-                    </div>
-                </div>
-                <!-- Portfolio Item 2 -->
-                <div class="relative group">
-                    <img class="w-full h-auto rounded-lg transform scale-100 transition-transform duration-300 group-hover:scale-105" src="images/portfolio-2.jpg" alt="Portfolio Item 2">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex justify-center items-center">
-                        <a href="portfolio-item-2.html" class="text-white text-xl font-semibold hover:underline">Lihat Detail</a>
-                    </div>
-                </div>
-                <!-- Portfolio Item 3 -->
-                <div class="relative group">
-                    <img class="w-full h-auto rounded-lg transform scale-100 transition-transform duration-300 group-hover:scale-105" src="images/portfolio-3.jpg" alt="Portfolio Item 3">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex justify-center items-center">
-                        <a href="portfolio-item-3.html" class="text-white text-xl font-semibold hover:underline">Lihat Detail</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Pendidikan -->
+    <section id="education" class="container section">
+        <h2>Pendidikan</h2>
+        <ul class="timeline">
+            <li>
+                <p class="mb-2"><strong>TK</strong></p>
+                <p>Kartika 19 Bandung</p>
+                <p>2009-2010</p>
+            </li>
+            <li>
+                <p class="mb-2"><strong>SD</strong></p>
+                <p>SDN 0408232 Kabanjahe</p>
+                <p>2010-2016</p>
+            </li>
+            <li>
+                <p class="mb-2"><strong>SMP</strong></p>
+                <p>SMPN 3 Berastagi</p>
+                <p>2016-2018</p>
+            </li>
+            <li>
+                <p class="mb-2"><strong>SMA</strong></p>
+                <p>SMA Swasta Santa Maria Kabanjahe</p>
+                <p>2019-2021</p>
+            </li>
+            <li>
+                <p class="mb-2"><strong>Universitas</strong></p>
+                <p>Universitas Pendidikan Ganesha</p>
+                <p>2022-Sekarang</p>
+            </li>
+        </ul>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-16 bg-custom">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-serif text-custom text-center mb-10">Hubungi Saya</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-indigo-900 font-serif">Instagram</h3>
-                    <a href="https://instagram.com/kriss.laughs?igshid=MmU2YjMzNjRlOQ==" class="text-blue-600 hover:underline mt-2" target="_blank" rel="noopener noreferrer">kriss.laughs</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-indigo-900 font-serif">Email</h3>
-                    <a href="mailto:tinabgn123@gmail.com" class="text-blue-600 hover:underline mt-2">tinabgn123@gmail.com</a>
-                </div>
-            </div>
+    <!-- Hobi Saya -->
+    <section id="hobbies" class="container section">
+        <h2>Hobi Saya</h2>
+        <div class="hobbies">
+            <div class="hobby">Desain</div>
+            <div class="hobby">Style</div>
+            <div class="hobby">Kewirausahaan</div>
+            <div class="hobby">Menari</div>
+            <div class="hobby">Membaca buku</div>
+            <div class="hobby">Traveling</div>
+            <div class="hobby">Foodie</div>
+            <div class="hobby">Menonton film</div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-custom py-10">
-        <div class="container mx-auto text-center">
-            <p class="text-white">© 2023 [Nama Anda]. All rights reserved.</p>
-        </div>
+    <footer style="text-align: center;" class="container section">
+        <p>&copy; 2023 [Nama Anda]. All rights reserved.</p>
     </footer>
 </body>
 </html>
